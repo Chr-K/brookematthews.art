@@ -1,0 +1,34 @@
+body{
+  background:linear-gradient(to right,#231942,#5e548e,#9f86c0);
+  border:none;
+  margin:0;
+  }
+  /* text formatting*/
+  .text-center{
+    text-align: center;
+  }
+  .noul{
+    text-decoration: none;
+  }
+  
+  /*
+  text-colors
+  */
+  .gold{
+    color:gold;
+  }
+  .pink{
+    color:#e0b1cb;
+  }
+  .white{
+    color:white;
+  }
+  /*
+  text-sizes
+  */
+  .medium-text{
+    font-size:1.5rem;
+  }
+  .large-text{
+    font-size: 2rem;
+  }
