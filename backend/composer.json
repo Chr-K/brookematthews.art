@@ -1,8 +1,8 @@
 {
 "autoload":{
     "psr-4":{
-        "controller\\": "/backend/controllers",
-        "model\\": "/backend/models"
+        "controller\\": "../controllers",
+        "model\\": "../models"
     }
 }
 }
