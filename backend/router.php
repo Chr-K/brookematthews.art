@@ -2,7 +2,7 @@
 class Router{
     protected $routes = [];
 public function addRoute($method,$url,$controller,$handler){
-        $this->routes[] = ['method'=>$method,'url'=>$url,'controller'=>$controller,'$handler'=>$handler];
+        $this->routes[] = ['method'=>$method,'url'=>$url,'controller'=>$controller,'handler'=>$handler];
     }
 public function handleRequest(){
     $method = $_SERVER['REQUEST_METHOD'];
