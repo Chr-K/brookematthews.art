@@ -1,7 +1,7 @@
 <?php
 namespace model;
 
-class item_models{
+class ItemModel{
     function get_items(){
         return('error 5. more coffee required');
     }

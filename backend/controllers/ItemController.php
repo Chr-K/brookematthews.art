@@ -1,11 +1,11 @@
 <?php
-namespace controller;
+namespace Controller;
 
-use model\item_models;
+use Model\ItemModel;
 
 class items_controller{
     function get_items(){
-        $model = new item_models();
+        $model = new ItemModel();
         $data = $model->get_items();
         return($data);
     }
