@@ -1,6 +1,6 @@
 <?php
 
-use controller\items_controller;
+use Controller\ItemController;
 
 header('Access-Control-Allow-Origin: https://brookematthews.art');
 require __DIR__ . '/vendor/autoload.php';
