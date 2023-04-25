@@ -13,6 +13,7 @@ public function handleRequest(){
             $controllerName = $route['controller'];
             $handler = $route['handler'];
             $controllerClass = 'Controllers\\' . $controllerName;
+            echo $controllerName;
             $controller = new $controllerClass();
             $response = $controller->$handler(...$matches);
             echo json_encode($response);
