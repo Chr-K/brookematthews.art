@@ -5,6 +5,6 @@ require_once './router.php';
 session_start();
 
 $router = new Router();
-$router->addRoute('GET','api.brookematthews.art/getitems','item_controller','get_items');
+$router->addRoute('GET','/getitems','item_controller','get_items');
 $router->handleRequest();
 ?>
