@@ -12,7 +12,7 @@ public function handleRequest(){
             array_shift($matches);
             $controllerName = $route['controller'];
             $handler = $route['handler'];
-            $controllerClass = 'controller\\' . $controllerName;
+            $controllerClass = 'Controller\\' . $controllerName;
             $controller = new $controllerClass();
             $response = $controller->$handler(...$matches);
             echo json_encode($response);
