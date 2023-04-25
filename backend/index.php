@@ -1,4 +1,4 @@
 <?php
-header('Access-Control-Allow_origin: https://brookematthews.art');
+header('Access-Control-Allow-Origin: https://brookematthews.art');
 echo json_encode('items');
 ?>
