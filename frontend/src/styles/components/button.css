@@ -1,0 +1,13 @@
+.button{
+    padding:none;
+    border:none;
+    outline:none;
+
+}
+.button--primary{
+    width:15rem;
+    height:5rem;
+}
+.button--secondary{
+
+}
