@@ -1,4 +1,7 @@
 <?php
+
+use controller\items_controller;
+
 header('Access-Control-Allow-Origin: https://brookematthews.art');
 require __DIR__ . '/vendor/autoload.php';
 require_once './router.php';
