@@ -1,7 +1,6 @@
 <?php
 header('Access-Control-Allow-Origin: https://brookematthews.art');
 require __DIR__ . '/vendor/autoload.php';
-
 require_once './router.php';
 session_start();
 
