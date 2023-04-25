@@ -8,7 +8,7 @@ public function handleRequest(){
     $method = $_SERVER['REQUEST_METHOD'];
     $url = $_SERVER['REQUEST_URI'];
     foreach($this->routes as $route){
-        if($route['method' === $method && preg_match('#^' . $route['url'] . '$#',$url,$matches)]){
+        if($route['method'] === $method && preg_match('#^' . $route['url'] . '$#',$url,$matches)){
             array_shift($matches);
             $controllerName = $route['controller'];
             $handler = $route['handler'];
