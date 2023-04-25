@@ -1,5 +1,4 @@
 <?php
-use Controllers\ItemController;
 
 
 class Router{
@@ -13,10 +12,8 @@ public function handleRequest(){
     foreach($this->routes as $route){
         if($route['method'] === $method && preg_match('#^' . $route['url'] . '$#',$url,$matches)){
             array_shift($matches);
-            $controllerName = $route['controller'];
             $handler = $route['handler'];
-            $controllerClass = $controllerName;
-            $controller = new $controllerClass();
+            $controller = $route['controller'];
             $response = $controller->$handler(...$matches);
             echo json_encode($response);
             return;
