@@ -1,5 +1,5 @@
 <?php
-namespace model;
+namespace Models;
 
 class ItemModel{
     function get_items(){

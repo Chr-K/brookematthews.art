@@ -1,7 +1,7 @@
 <?php
-namespace Controller;
+namespace Controllers;
 
-use Model\ItemModel;
+use Models\ItemModel;
 
 class ItemController {
     function get_items(){
