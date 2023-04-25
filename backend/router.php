@@ -1,5 +1,5 @@
 <?php
-use Controllers\ItemController;
+
 class Router{
     protected $routes = [];
 public function addRoute($method,$url,$controller,$handler){
@@ -13,7 +13,7 @@ public function handleRequest(){
             array_shift($matches);
             $controllerName = $route['controller'];
             $handler = $route['handler'];
-            $controllerClass = 'Controllers\\' . $controllerName;
+            $controllerClass = $controllerName;
             $controller = new $controllerClass();
             $response = $controller->$handler(...$matches);
             echo json_encode($response);
