@@ -6,7 +6,7 @@ interface Item{
     name:string
 }
 data.forEach((item:Item) => {
-    console.log(item)
+    console.log(item.name)
 });
 }
 export default function Home(){
