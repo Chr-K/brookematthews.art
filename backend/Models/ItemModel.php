@@ -3,7 +3,6 @@ namespace Models;
 
 class ItemModel{
     function get_items(){
-        require_once 'db.php';
         /*
              $stmt = $mysqli->prepare('SELECT name FROM shop');
         $stmt->execute();
