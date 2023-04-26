@@ -11,11 +11,10 @@ class ItemModel{
             $results = array();
             $stmt->bind_result($name);
             while ($stmt->fetch()){
-                array_push($results,$name);
+                array_push($results,array('name'=>$name));
             }
             return($name);
         }   
-        return($us);
     }
 }
 
