@@ -3,7 +3,7 @@ namespace Models;
 
 class ItemModel{
     private $mysqli;
-    private function __construct()
+    public function __construct()
     {
         require_once('../db.php');
         $this->mysqli = $mysqli;
