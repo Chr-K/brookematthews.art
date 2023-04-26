@@ -5,7 +5,7 @@ class ItemModel{
     private $mysqli;
     public function __construct()
     {
-        require_once('../db.php');
+        require_once('./backend/db.php');
         $this->mysqli = $mysqli;
     }
     function get_items(){
