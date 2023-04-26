@@ -3,11 +3,10 @@ import { getitems } from '../services/items'
 async function alertitems(){
 const data = await getitems()
 interface Item{
-    name: string
+    name:string;
 }
-data.foreach((item:Item[])=>{
-    console.log(item[0].name)
-    console.log(item[1].name)
+data.items.foreach((item:Item)=>{
+    console.log(item.name)
 })
 }
 export default function Home(){
