@@ -5,8 +5,8 @@ const data = await getitems()
 interface Item{
     name:string
 }
-data.foreach((item:Item[])=>{
-    console.log(item[0].name)
+data.foreach((item:Item)=>{
+    console.log(item.name)
 })
 }
 export default function Home(){
