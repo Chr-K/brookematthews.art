@@ -13,7 +13,7 @@ class ItemModel{
             while ($stmt->fetch()){
                 array_push($results,array('name'=>$name));
             }
-            return($name);
+            return($results);
         }   
     }
 }
