@@ -2,14 +2,10 @@
 namespace Models;
 
 class ItemModel{
-    private $mysqli;
-    public function __construct()
-    {
-        require('./backend/db.php');
-        $this->mysqli = $mysqli;
-    }
     function get_items(){
-        $stmt = $this->mysqli->prepare('SELECT name FROM shop');
+        require_once 'backend/db.php';
+        
+        $stmt = $mysqli->prepare('SELECT name FROM shop');
         $stmt->execute();
         $stmt->store_result();
         if($stmt->num_rows()>0){
