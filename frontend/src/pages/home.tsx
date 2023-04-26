@@ -5,7 +5,7 @@ const data = await getitems()
 interface Item{
     name:string
 }
-data.array.forEach((item:Item) => {
+data.forEach((item:Item) => {
     console.log(item)
 });
 }
