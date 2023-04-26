@@ -2,7 +2,13 @@ import '../styles/pages/home.css'
 import { getitems } from '../services/items'
 async function alertitems(){
 const data = await getitems()
-console.log(data)
+interface Item{
+    name: string
+}
+data.foreach((item:Item[])=>{
+    console.log(item[0].name)
+    console.log(item[1].name)
+})
 }
 export default function Home(){
     return(
