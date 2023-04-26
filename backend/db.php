@@ -1,6 +1,6 @@
 <?php
 $db = getenv('DB');
-$db_host = getenv('DB_HOST');
+$db_host = getenv('brookematthews.art');
 $db_password = getenv('DB_PASSWORD');
 $db_user = getenv('DB_USER');
 
