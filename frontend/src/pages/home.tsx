@@ -2,7 +2,7 @@ import '../styles/pages/home.css'
 import { getitems } from '../services/items'
 async function alertitems(){
 const data = await getitems()
-alert(data)
+console.log(data)
 }
 export default function Home(){
     return(
