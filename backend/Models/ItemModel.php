@@ -4,7 +4,7 @@ namespace Models;
 class ItemModel{
     function get_items(){
         require 'db.php';
-        $stmt = $mysqli->prepare('SELECT name FROM shop');
+        $stmt = $mysqli->prepare('SELECT name FROM items');
         $stmt->execute();
         $stmt->store_result();
         if($stmt->num_rows()>0){
