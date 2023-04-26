@@ -17,7 +17,8 @@ class ItemModel{
             return($name);
         }   
         */
-        echo $db_user;
+        $us = getenv('DB_USER');
+        echo $us;
     }
 }
 
