@@ -6,7 +6,7 @@ class ItemController {
     function get_items(){
         $model = new ItemModel();
         $data = $model->get_items();
-        return(json_encode($data));
+        return($data);
     }
 }
 
