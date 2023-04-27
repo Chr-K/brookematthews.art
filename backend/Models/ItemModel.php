@@ -3,9 +3,8 @@ namespace Models;
 
 class ItemModel{
     function get_items(){
-        /*
-        
-                require 'db.php';
+        /* */
+        require 'db.php';
         $stmt = $mysqli->prepare('SELECT name FROM items');
         $stmt->execute();
         $stmt->store_result();
@@ -17,10 +16,6 @@ class ItemModel{
             }
             return($results);
         }   
-        
-        */
-        $var = getenv('DB');
-        return($var);
     }
 }
 
