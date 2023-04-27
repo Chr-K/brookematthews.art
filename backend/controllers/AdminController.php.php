@@ -4,10 +4,10 @@ namespace Controllers;
 use Models\AdminModel;
 
 class AdminController{
-    function Login(){
+    function admin_login(){
         $model = new AdminModel();
-        $response = $model->Login();
-        return($response);
+        $response = $model->Login($_POST['email'],$_POST['password']);
+        return('test_successful');
     }
 }
 
