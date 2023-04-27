@@ -6,6 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'model\\' => array('/backend/models'),
-    'controller\\' => array('/backend/controllers'),
+    'Models\\' => array($baseDir . '/Models'),
+    'Controllers\\' => array($baseDir . '/Controllers'),
 );
