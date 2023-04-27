@@ -1,6 +1,11 @@
+import { getitems } from "../services/items"
+
+
 export default function Store(){
+    var x = getitems()
+    console.log(x)
     return(
     <div>
-        this is the store page
+
     </div>)
 }
