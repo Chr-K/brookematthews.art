@@ -2,8 +2,7 @@
 namespace Controllers;
 
 use Models\AdminModel;
-#testing
-class AdminController{
+ class AdminController{
     function admin_login(){
         $model = new AdminModel();
         $response = $model->Login($_POST['email'],$_POST['password']);
