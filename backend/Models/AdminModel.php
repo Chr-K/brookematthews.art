@@ -2,6 +2,11 @@
 namespace Models;
 use Auth\Token;
 class AdminModel{
+    private $Token;
+    function __construct()
+    {
+        $this->Token = new Token();
+    }
     function Login($email,$password){
         require 'db.php';
         $stmt = $mysqli->prepare('SELECT * from admins where email = ?');
@@ -12,8 +17,7 @@ class AdminModel{
             $row = $result->fetch_assoc();
             if(password_verify($password,$row['password'])){
                 $id=$row['id'];
-                $Token = new Token();
-                $Token->MakeToken($id,$email,"/");
+                $this->Token->MakeToken($id,$email,"/");
                 return('success');
             }
             else{
