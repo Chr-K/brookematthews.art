@@ -3,14 +3,18 @@ namespace Controllers;
 
 use Models\AdminModel;
  class AdminController{
-#test
+    private $data;
+    function __construct()
+    {
+        $json_data = file_get_contents('php://input');
+        $this->data = json_decode($json_data,true);
+    }
     function admin_login(){
         $model = new AdminModel();
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $email_raw = json_decode($email);
-        $password_raw = json_decode($password);
-        $response = $model->Login($email,$password_raw);
+        $email = $this->data['email'];
+        $password = $this->data['password'];
+
+        $response = $model->Login($email,$password);
         return($response);
     }
 }
