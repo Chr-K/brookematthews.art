@@ -18,7 +18,7 @@ class AdminModel{
             }
         }
         else{
-            return('email not found');
+            return($email);
         }
     }
 }
