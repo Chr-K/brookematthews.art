@@ -4,6 +4,10 @@
         "Controllers\\": "Controllers/",
         "Models\\": "Models/",
         "Auth\\":"/backend/Auth/"
+
     }
-}
+},
+    "require": {
+        "firebase/php-jwt": "^6.4"
+    }
 }
