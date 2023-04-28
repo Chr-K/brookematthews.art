@@ -17,11 +17,6 @@ export default function Home(){
         }
     }
 
-    useEffect(()=>{
-    console.log(FormData)
-    })
-
-
     return(
     <div className="home_container black">
         <form className="login_panel text-primary">
