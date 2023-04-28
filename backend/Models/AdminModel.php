@@ -14,11 +14,11 @@ class AdminModel{
                 return('success');
             }
             else{
-                return 'badpassword';
+                return $password;
             }
         }
         else{
-            return(json_encode($password));
+            return($email);
         }
     }
 }
