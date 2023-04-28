@@ -7,6 +7,7 @@ use Models\AdminModel;
     function __construct()
     {
         $json_data = file_get_contents('php://input');
+
         $this->data = json_decode($json_data,true);
     }
     function admin_login(){
