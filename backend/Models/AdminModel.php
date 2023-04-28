@@ -1,5 +1,6 @@
 <?php
 namespace Models;
+echo "AdminModel.php";
 use Auth\Token;
 class AdminModel{
     private $Token;

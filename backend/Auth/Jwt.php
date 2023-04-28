@@ -1,5 +1,7 @@
 <?php
 namespace Auth;
+echo 'Jwt.php';
+
 
 use Exception;
 use Firebase\JWT\JWT;
