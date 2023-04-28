@@ -18,7 +18,7 @@ class AdminModel{
             }
         }
         else{
-            return($email);
+            return(json_encode($email));
         }
     }
 }
