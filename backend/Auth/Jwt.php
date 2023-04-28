@@ -8,7 +8,7 @@ class Token{
     private $key;
     function __construct()
     {
-        $this->key = getenv('SECRET_KEY');
+        $this->key = 'test';
     }
     function MakeToken($id,$email,$url){
 
