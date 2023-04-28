@@ -10,7 +10,7 @@ use Models\AdminModel;
         $password = $_POST['password'];
         $email_raw = json_decode($email);
         $password_raw = json_decode($password);
-        $response = $model->Login($email_raw,$password_raw);
+        $response = $model->Login($email,$password);
         return($response);
     }
 }
