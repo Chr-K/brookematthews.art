@@ -1,6 +1,6 @@
 <?php
 namespace Models;
-use Auth\Tokens;
+use Auth\Token;
 class AdminModel{
     function Login($email,$password){
         require 'db.php';
@@ -12,7 +12,7 @@ class AdminModel{
             $row = $result->fetch_assoc();
             if(password_verify($password,$row['password'])){
                 $id=$row['id'];
-                $Token = new Tokens();
+                $Token = new Token();
                 $Token->MakeToken($id,$email,"/");
                 return('success');
             }

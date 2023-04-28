@@ -4,7 +4,7 @@ namespace Auth;
 use Exception;
 use Firebase\JWT\JWT;
 
-class Tokens{
+class Token{
     private $key;
     function __construct()
     {
