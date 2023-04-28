@@ -19,7 +19,7 @@ public function handleRequest(){
             return;
         }
     }
-    http_response_code(405);
+    http_response_code(404);
     echo json_encode($_SERVER['REQUEST_URI'].$method);
     }
 }
