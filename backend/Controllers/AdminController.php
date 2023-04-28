@@ -9,7 +9,7 @@ use Models\AdminModel;
         $email = $_POST['email'];
         $emaildata = json_decode($email);
         echo $emaildata;
-        $password = filter_var(json_decode($_POST['password']),FILTER_UNSAFE_RAW);
+        $password = $_POST['password'];
         $response = $model->Login($email,$password);
         return($response);
     }
