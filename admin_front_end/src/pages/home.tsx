@@ -28,7 +28,7 @@ export default function Home(){
             <label>Email</label>
             <input onChange={e=>setFormData({...FormData,email:e.target.value})} className='text-primary'></input>
             <label>Password</label>
-            <input className='text-primary'></input>
+            <input onChange={e=>setFormData({...FormData,password:e.target.value})} className='text-primary'></input>
             <button onClick={
             e=>{
             e.preventDefault()
