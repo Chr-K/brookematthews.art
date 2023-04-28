@@ -14,8 +14,7 @@ class AdminModel{
                 return('success');
             }
             else{
-                echo 'testing';
-                return $row;
+                return $password;
             }
         }
         else{
