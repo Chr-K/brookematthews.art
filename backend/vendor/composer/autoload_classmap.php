@@ -6,9 +6,12 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controllers\\AdminController' => $baseDir . '/src/Controllers/AdminController.php',
+    'App\\Controllers\\ItemController' => $baseDir . '/src/Controllers/ItemController.php',
+    'App\\Helpers\\Token' => $baseDir . '/src/Helpers/Token.php',
+    'App\\Models\\AdminModel' => $baseDir . '/src/Models/AdminModel.php',
+    'App\\Models\\ItemModel' => $baseDir . '/src/Models/ItemModel.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'Controllers\\AdminController' => $baseDir . '/Controllers/AdminController.php',
-    'Controllers\\ItemController' => $baseDir . '/Controllers/ItemController.php',
     'Firebase\\JWT\\BeforeValidException' => $vendorDir . '/firebase/php-jwt/src/BeforeValidException.php',
     'Firebase\\JWT\\CachedKeySet' => $vendorDir . '/firebase/php-jwt/src/CachedKeySet.php',
     'Firebase\\JWT\\ExpiredException' => $vendorDir . '/firebase/php-jwt/src/ExpiredException.php',
@@ -16,6 +19,4 @@ return array(
     'Firebase\\JWT\\JWT' => $vendorDir . '/firebase/php-jwt/src/JWT.php',
     'Firebase\\JWT\\Key' => $vendorDir . '/firebase/php-jwt/src/Key.php',
     'Firebase\\JWT\\SignatureInvalidException' => $vendorDir . '/firebase/php-jwt/src/SignatureInvalidException.php',
-    'Models\\AdminModel' => $baseDir . '/Models/AdminModel.php',
-    'Models\\ItemModel' => $baseDir . '/Models/ItemModel.php',
 );

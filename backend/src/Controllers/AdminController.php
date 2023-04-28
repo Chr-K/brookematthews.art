@@ -1,5 +1,5 @@
 <?php
-namespace Controllers;
+namespace App\Controllers;
 use Models\AdminModel;
  class AdminController{
     private $data;

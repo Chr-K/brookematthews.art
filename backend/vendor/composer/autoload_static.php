@@ -7,47 +7,34 @@ namespace Composer\Autoload;
 class ComposerStaticInit23e63df9f6ad8f6c1df8ebaa8f981bc4
 {
     public static $prefixLengthsPsr4 = array (
-        'M' => 
-        array (
-            'Models\\' => 7,
-        ),
-        'H' => 
-        array (
-            'Helpers\\' => 8,
-        ),
         'F' => 
         array (
             'Firebase\\JWT\\' => 13,
         ),
-        'C' => 
+        'A' => 
         array (
-            'Controllers\\' => 12,
+            'App\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Models\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/Models',
-        ),
-        'Helpers\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/Helpers',
-        ),
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
-        'Controllers\\' => 
+        'App\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/Controllers',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
     public static $classMap = array (
+        'App\\Controllers\\AdminController' => __DIR__ . '/../..' . '/src/Controllers/AdminController.php',
+        'App\\Controllers\\ItemController' => __DIR__ . '/../..' . '/src/Controllers/ItemController.php',
+        'App\\Helpers\\Token' => __DIR__ . '/../..' . '/src/Helpers/Token.php',
+        'App\\Models\\AdminModel' => __DIR__ . '/../..' . '/src/Models/AdminModel.php',
+        'App\\Models\\ItemModel' => __DIR__ . '/../..' . '/src/Models/ItemModel.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Controllers\\AdminController' => __DIR__ . '/../..' . '/Controllers/AdminController.php',
-        'Controllers\\ItemController' => __DIR__ . '/../..' . '/Controllers/ItemController.php',
         'Firebase\\JWT\\BeforeValidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/BeforeValidException.php',
         'Firebase\\JWT\\CachedKeySet' => __DIR__ . '/..' . '/firebase/php-jwt/src/CachedKeySet.php',
         'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',
@@ -55,8 +42,6 @@ class ComposerStaticInit23e63df9f6ad8f6c1df8ebaa8f981bc4
         'Firebase\\JWT\\JWT' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWT.php',
         'Firebase\\JWT\\Key' => __DIR__ . '/..' . '/firebase/php-jwt/src/Key.php',
         'Firebase\\JWT\\SignatureInvalidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/SignatureInvalidException.php',
-        'Models\\AdminModel' => __DIR__ . '/../..' . '/Models/AdminModel.php',
-        'Models\\ItemModel' => __DIR__ . '/../..' . '/Models/ItemModel.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
