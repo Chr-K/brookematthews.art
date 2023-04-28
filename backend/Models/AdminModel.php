@@ -3,7 +3,7 @@ namespace Models;
 use Auth\Token;
 class AdminModel{
     function Login($email,$password){
-        require './backend/db.php';
+        require '../db.php';
         $stmt = $mysqli->prepare('SELECT * from admins where email = ?');
         $stmt->bind_param('s',$email);
         $stmt->execute();
