@@ -9,13 +9,14 @@ public function addRoute($method,$url,$controller,$handler){
 public function handleRequest(){
     $method = $_SERVER['REQUEST_METHOD'];
     $url = $_SERVER['REQUEST_URI'];
+    echo var_dump($url,$method);
     foreach($this->routes as $route){
         if($route['method'] === $method && preg_match('#^' . $route['url'] . '$#',$url,$matches)){
             array_shift($matches);
             $handler = $route['handler'];
             $controller = $route['controller'];
             $response = $controller->$handler(...$matches);
-            echo json_encode($_SERVER['REQUEST_URI']);
+            echo json_encode($response);
             return;
         }
     }
