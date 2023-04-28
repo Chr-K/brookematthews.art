@@ -1,6 +1,5 @@
 <?php
 namespace Models;
-echo "AdminModel.php";
 class AdminModel{
     function Login($email,$password){
         require 'db.php';

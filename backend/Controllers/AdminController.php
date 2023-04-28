@@ -1,6 +1,5 @@
 <?php
 namespace Controllers;
-echo "AdminController.php";
 use Models\AdminModel;
  class AdminController{
     private $data;
