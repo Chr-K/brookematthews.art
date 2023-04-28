@@ -2,7 +2,7 @@
 namespace Controllers;
 
 use Models\AdminModel;
-
+#testing
 class AdminController{
     function admin_login(){
         $model = new AdminModel();
