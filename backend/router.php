@@ -15,7 +15,7 @@ public function handleRequest(){
             $handler = $route['handler'];
             $controller = $route['controller'];
             $response = $controller->$handler(...$matches);
-            echo ($response);
+            echo json_encode($response);
             return;
         }
     }
