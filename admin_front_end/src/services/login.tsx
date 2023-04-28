@@ -11,7 +11,7 @@ export async function AdminLogin(email:string,password:string){
     },
     body: JSON.stringify(data)
     })
-    .then(response=>response.json())
+    .then(response=>response.text())
     .then(data=>console.log(data))
     .catch(error=>console.error(error))
 
