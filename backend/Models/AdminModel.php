@@ -14,7 +14,7 @@ class AdminModel{
                 return('success');
             }
             else{
-                return (password_verify(1234,$row['password']));
+                return (password_verify('1234',$row['password']));
             }
         }
         else{
