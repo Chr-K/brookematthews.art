@@ -1,7 +1,7 @@
 export async function AdminLogin(email:string,password:string){
     const data = {
-        email:email,
-        password:password,
+        'email':email,
+        'password':password,
     }
 
     await fetch('https://api.brookematthews.art/adminlogin',{
