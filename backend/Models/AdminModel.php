@@ -14,7 +14,7 @@ class AdminModel{
                 return('success');
             }
             else{
-                return (password_verify(1234,"$2y$10$OMNttpBtP.jGJDlJVg5o6.jpC7SyDu1TFkqef2GPMP3REn1eAflJi\n"));
+                return (password_hash(1234,PASSWORD_DEFAULT));
             }
         }
         else{
