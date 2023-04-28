@@ -8,7 +8,8 @@ use Models\AdminModel;
         $model = new AdminModel();
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $response = $model->Login($email,$password);
+        $password_raw = json_decode($password);
+        $response = $model->Login($email,$password_raw);
         return($response);
     }
 }
