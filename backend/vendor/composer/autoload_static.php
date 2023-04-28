@@ -11,6 +11,10 @@ class ComposerStaticInit23e63df9f6ad8f6c1df8ebaa8f981bc4
         array (
             'Models\\' => 7,
         ),
+        'H' => 
+        array (
+            'Helpers\\' => 8,
+        ),
         'F' => 
         array (
             'Firebase\\JWT\\' => 13,
@@ -19,16 +23,16 @@ class ComposerStaticInit23e63df9f6ad8f6c1df8ebaa8f981bc4
         array (
             'Controllers\\' => 12,
         ),
-        'A' => 
-        array (
-            'Auth\\' => 5,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Models\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Models',
+        ),
+        'Helpers\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Helpers',
         ),
         'Firebase\\JWT\\' => 
         array (
@@ -37,10 +41,6 @@ class ComposerStaticInit23e63df9f6ad8f6c1df8ebaa8f981bc4
         'Controllers\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Controllers',
-        ),
-        'Auth\\' => 
-        array (
-            0 => '/backend/Auth',
         ),
     );
 

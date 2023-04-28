@@ -1,5 +1,5 @@
 <?php
-namespace Auth;
+namespace Helpers;
 
 use Exception;
 use Firebase\JWT\JWT;
