@@ -1,7 +1,7 @@
 import './styles/home.css'
 import { AdminLogin } from '../services/login'
 import { email_check } from '../helpers/regex'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 export default function Home(){
     const [FormData,setFormData] = useState({
         email:'',
