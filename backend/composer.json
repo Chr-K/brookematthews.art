@@ -3,7 +3,7 @@
     "psr-4":{
         "Controllers\\": "Controllers/",
         "Models\\": "Models/",
-        "Token\\":"Helpers/"
+        "Auth\\":"Helpers/"
     }
 }
 }
