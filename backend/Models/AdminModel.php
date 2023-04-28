@@ -14,6 +14,7 @@ class AdminModel{
                 return('success');
             }
             else{
+                echo 'testing';
                 return $row;
             }
         }
