@@ -32,7 +32,7 @@ class ComposerStaticInit23e63df9f6ad8f6c1df8ebaa8f981bc4
         ),
         'Auth\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/Helpers',
+            0 => __DIR__ . '/../..' . '/Auth',
         ),
     );
 

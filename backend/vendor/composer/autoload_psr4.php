@@ -8,5 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Models\\' => array($baseDir . '/Models'),
     'Controllers\\' => array($baseDir . '/Controllers'),
-    'Auth\\' => array($baseDir . '/Helpers'),
+    'Auth\\' => array($baseDir . '/Auth'),
 );
