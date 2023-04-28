@@ -14,6 +14,7 @@ class AdminModel{
                 return('success');
             }
             else{
+                echo (password_verify($password,$row['password']));
                 return $password;
             }
         }
