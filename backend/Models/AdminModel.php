@@ -4,7 +4,7 @@ namespace Models;
 class AdminModel{
     function Login($email,$password){
         require 'db.php';
-        $stmt = $mysqli->prepare('SELECT * from shop where email = ?');
+        $stmt = $mysqli->prepare('SELECT * from admin where email = ?');
         $stmt->bind_param('s',$email);
         $stmt->execute();
         $result = $stmt->get_result();
