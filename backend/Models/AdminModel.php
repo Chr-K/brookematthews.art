@@ -6,7 +6,7 @@ class AdminModel{
     private $Token;
     function __construct()
     {
-        $this->Token = new Token();
+        $this->Token = new \Auth\Token();
     }
     function Login($email,$password){
         require 'db.php';
