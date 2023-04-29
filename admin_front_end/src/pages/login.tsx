@@ -13,10 +13,9 @@ export default function Login(){
         if(email_check(FormData.email)){
                 const response = await AdminLogin(FormData.email,FormData.password)
                 if(response === 201){
-                    console.log(response)
                     redirect('/home')
+                    
                 }
-                console.log(response)
         }
         else{
             //email format invalid
