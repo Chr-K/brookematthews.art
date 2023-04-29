@@ -10,6 +10,8 @@ export async function AdminLogin(email:string,password:string){
     })
 
     if(response.ok){
+        redirect()
+
         return(response.status)
     }
     else{
@@ -19,9 +21,6 @@ export async function AdminLogin(email:string,password:string){
 }
 
 
-async function redirect(){
-const response = await fetch('https://api.brookematthews.art/admin_redirect_home',{
-    method:'GET',
-})
-return (response);
+ function redirect(){
+    window.location.href = 'https://admin.brookematthews.art/home'
 }
