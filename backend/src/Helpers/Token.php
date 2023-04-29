@@ -10,13 +10,13 @@ class Token{
     {
         $this->key = 'test';
     }
-    function MakeToken($id,$email,$url){
+    function MakeToken($id,$email,){
 
         $jwt = JWT::encode([
             'id'=>$id,
             'email'=>password_hash($email,PASSWORD_DEFAULT)
         ],$this->key,'HS256');
-        setcookie('jwt',$jwt,time() + 3600, '/',$url,true,true);
+        setcookie('jwt',$jwt,time() + 3600);
     }
     function DecodeToken(){
         $jwt = $_COOKIE['jwt'];
