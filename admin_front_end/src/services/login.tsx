@@ -4,13 +4,16 @@ export async function AdminLogin(email:string,password:string){
         'password':password,
     }
 
-    await fetch('https://api.brookematthews.art/adminlogin',{
+    const response = await fetch('https://api.brookematthews.art/adminlogin',{
     method:'POST',
     body: JSON.stringify(data)
     })
-    .then(response=>response.json())
-    .then(data=>console.log(data))
-    .catch(error=>console.error(error))
 
+    if(response.ok){
+        return(response.status)
+    }
+    else{
+        throw new Error('http error: ' + response.status)
+    }
 
 }

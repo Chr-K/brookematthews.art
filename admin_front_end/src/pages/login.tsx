@@ -2,15 +2,20 @@ import './styles/home.css'
 import { AdminLogin } from '../services/login'
 import { email_check } from '../helpers/regex'
 import { useState } from 'react'
+import { Navigate } from 'react-router-dom'
 export default function Login(){
     const [FormData,setFormData] = useState({
         email:'',
         password:'',
     })
 
-    function handlesubmit(){
+    async function handlesubmit(){
         if(email_check(FormData.email)){
-                    AdminLogin(FormData.email,FormData.password)
+                var response = await AdminLogin(FormData.email,FormData.password)
+                if(response = 201){
+                    <Navigate to="/home"></Navigate>
+                }
+
         }
         else{
             //email format invalid
