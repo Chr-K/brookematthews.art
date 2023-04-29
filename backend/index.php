@@ -6,8 +6,8 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 
 require_once './router.php';
-use Controllers\ItemController;
-use Controllers\AdminController;
+use App\Controllers\ItemController;
+use App\Controllers\AdminController;
 session_start();
 $router = new Router();
 $router->addRoute('GET','/getitems',new ItemController,'get_items');
