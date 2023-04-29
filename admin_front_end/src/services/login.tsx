@@ -24,7 +24,7 @@ async function redirect(){
 const response = await fetch('https://api.brookematthews.art/admin_redirect_home',{
     method:'GET',
     headers:{
-        'Access-Control-Allow-Origin': 'https://admin.brookematthews.art'
+        'Access-Control-Allow-Origin': 'https://api.brookematthews.art'
     }
 })
 return (response);
