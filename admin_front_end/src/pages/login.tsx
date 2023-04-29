@@ -16,7 +16,7 @@ export default function Login(){
                     console.log(response)
                     redirect('/home')
                 }
-
+                console.log(response)
         }
         else{
             //email format invalid
