@@ -21,7 +21,7 @@ export async function AdminLogin(email:string,password:string){
 
 
 async function redirect(){
-const response = await fetch('https://api.brookematthews.art/admin_home',{
+const response = await fetch('https://api.brookematthews.art/admin_redirect_home',{
     method:'GET',
 })
 return (response);

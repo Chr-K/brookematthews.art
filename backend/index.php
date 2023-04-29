@@ -14,6 +14,6 @@ session_start();
 $router = new Router();
 $router->addRoute('GET','/getitems',new ItemController,'get_items');
 $router->addRoute('POST','/adminlogin',new AdminController,'admin_login');
-$router->addRoute('GET','/adminredirect',new RedirectController,'admin_home');
+$router->addRoute('GET','/admin_redirect_home',new RedirectController,'admin_home');
 $router->handleRequest();
 ?>
