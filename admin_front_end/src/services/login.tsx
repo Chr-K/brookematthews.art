@@ -9,7 +9,7 @@ export async function AdminLogin(email:string,password:string){
     body: JSON.stringify(data)
     })
 
-    if(response.ok){
+    if(response.status === 201){
         console.log('loginok')
         return(response.status)
     }
