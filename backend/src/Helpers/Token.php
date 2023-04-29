@@ -16,7 +16,7 @@ class Token{
             'id'=>$id,
             'email'=>password_hash($email,PASSWORD_DEFAULT)
         ],$this->key,'HS256');
-        setcookie('jwt',$jwt,time() + 3600);
+        return $jwt;
     }
     function DecodeToken(){
         $jwt = $_COOKIE['jwt'];
