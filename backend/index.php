@@ -2,7 +2,6 @@
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/router.php';
 
-header('Access-Control-Allow-Origin: https://admin.brookematthews.art');
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header('Access-Control-Allow-Headers: Content-Type');
 
