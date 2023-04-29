@@ -9,12 +9,6 @@ export async function AdminLogin(email:string,password:string){
     body: JSON.stringify(data)
     })
 
-    if(response.status === 201){
-        console.log('loginok')
-        return(response.status)
-    }
-    else{
-        throw new Error('http error: ' + response.status)
-    }
+    console.log(response)
 
 }
