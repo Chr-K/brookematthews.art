@@ -12,7 +12,8 @@ export default function Login(){
     async function handlesubmit(){
         if(email_check(FormData.email)){
                 var response = await AdminLogin(FormData.email,FormData.password)
-                if(response = 201){
+                if(response === 201){
+                    console.log(response)
                     redirect('/home')
                 }
 
