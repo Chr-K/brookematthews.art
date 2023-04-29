@@ -13,8 +13,7 @@ export default function Login(){
         if(email_check(FormData.email)){
                 const response = await AdminLogin(FormData.email,FormData.password)
                 if(response === 201){
-                    redirect('/home')
-                    
+                    return redirect('/home')
                 }
         }
         else{
