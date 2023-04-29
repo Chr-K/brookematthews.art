@@ -10,6 +10,7 @@ export async function AdminLogin(email:string,password:string){
     })
 
     if(response.ok){
+        console.log('loginok')
         return(response.status)
     }
     else{

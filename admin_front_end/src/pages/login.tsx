@@ -15,6 +15,7 @@ export default function Login(){
                 if(response = 201){
                     redirect('/home')
                 }
+                console.log(response)
 
         }
         else{
