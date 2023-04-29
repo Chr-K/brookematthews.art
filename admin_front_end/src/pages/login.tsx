@@ -2,7 +2,6 @@ import './styles/home.css'
 import { AdminLogin } from '../services/login'
 import { email_check } from '../helpers/regex'
 import { useState } from 'react'
-import { redirect } from 'react-router-dom'
 export default function Login(){
     const [FormData,setFormData] = useState({
         email:'',
@@ -12,9 +11,7 @@ export default function Login(){
     async function handlesubmit(){
         if(email_check(FormData.email)){
                 const response = await AdminLogin(FormData.email,FormData.password)
-                if(response === 201){
-                    return redirect('/home')
-                }
+            return(response)
         }
         else{
             //email format invalid

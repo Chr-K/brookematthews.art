@@ -15,6 +15,7 @@ class AdminModel{
                 $Token = new Token();
                 $Token->MakeToken('1','2');
                 http_response_code(201);
+                header('Location:/home');
                 return('success');
             }
             else{
