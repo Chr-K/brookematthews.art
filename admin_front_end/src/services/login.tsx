@@ -10,10 +10,19 @@ export async function AdminLogin(email:string,password:string){
     })
 
     if(response.ok){
+        await redirect()
         return(response.status)
     }
     else{
         throw new Error('http error: ' + response.status)
     }
 
+}
+
+
+async function redirect(){
+const response = await fetch('https://api.brookematthews.art/admin_home',{
+    method:'GET',
+})
+return (response);
 }
