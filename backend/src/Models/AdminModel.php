@@ -13,7 +13,7 @@ class AdminModel{
             $row = $result->fetch_assoc();
             if(password_verify($password,$row['password'])){
                 $Token = new Token();
-                $Token->MakeToken('1','2','/');
+                $Token->MakeToken('1','2','admin.brookematthews.art/');
                 return('success');
             }
             else{
