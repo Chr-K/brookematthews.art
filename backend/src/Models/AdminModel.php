@@ -1,6 +1,6 @@
 <?php
 namespace App\Models;
-use Helpers\Token;
+use App\Helpers\Token;
 
 class AdminModel{
     function Login($email,$password){

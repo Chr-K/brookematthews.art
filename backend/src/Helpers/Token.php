@@ -10,7 +10,7 @@ class Token{
     {
         $this->key = 'test';
     }
-    function MakeToken($id,$email,){
+    function MakeToken($id,$email){
 
         $jwt = JWT::encode([
             'id'=>$id,
