@@ -17,7 +17,6 @@ class AdminModel{
                 http_response_code(201);
                 header('Location: /home');
                 exit();
-                return('success');
             }
             else{
 
