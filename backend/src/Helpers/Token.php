@@ -11,12 +11,12 @@ class Token{
         $this->key = 'test';
     }
     function MakeToken($id,$email){
-
+        $time = time();
         $jwt = JWT::encode([
             'id'=>$id,
             'email'=>password_hash($email,PASSWORD_DEFAULT)
         ],$this->key,'HS256');
-        setcookie('jwt',$jwt,3600,'/','.brookematthews.art',true,true);
+        setcookie('jwt',$jwt,$time . 3600,'/','.brookematthews.art',true,true);
     }
     function DecodeToken(){
         $jwt = $_COOKIE['jwt'];
