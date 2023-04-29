@@ -1,4 +1,4 @@
-import './styles/home.css'
+import './styles/login.css'
 import { AdminLogin } from '../services/login'
 import { email_check } from '../helpers/regex'
 import { useState } from 'react'
@@ -19,7 +19,7 @@ export default function Login(){
     }
 
     return(
-    <div className="home_container black">
+    <div className="login3_container black">
         <form className="login_panel text-primary">
             <label>Email</label>
             <input onChange={e=>setFormData({...FormData,email:e.target.value})} className='text-primary'></input>
