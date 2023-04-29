@@ -1,6 +1,6 @@
 <?php
 namespace App\Controllers;
-use Models\AdminModel;
+use App\Models\AdminModel;
  class AdminController{
     private $data;
     function __construct()
