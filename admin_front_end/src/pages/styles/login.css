@@ -10,7 +10,6 @@ margin-top:5rem;
 gap:1rem;
 background-color: white;
 padding:1rem 3rem 0rem 3rem;
-height:20rem;
 }
 @media screen and (min-width:700px){
     .login_panel{

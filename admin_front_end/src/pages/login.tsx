@@ -19,7 +19,7 @@ export default function Login(){
     }
 
     return(
-    <div className="login3_container black">
+    <div className="login_container black">
         <form className="login_panel text-primary">
             <label>Email</label>
             <input onChange={e=>setFormData({...FormData,email:e.target.value})} className='text-primary'></input>
