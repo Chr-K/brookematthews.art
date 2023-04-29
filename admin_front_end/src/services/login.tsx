@@ -9,7 +9,11 @@ export async function AdminLogin(email:string,password:string){
     body: JSON.stringify(data)
     })
 
-    console.log(response)
-    console.log('hi')
+    if(response.ok){
+        return(response.status)
+    }
+    else{
+        throw new Error('http error: ' + response.status)
+    }
 
 }
