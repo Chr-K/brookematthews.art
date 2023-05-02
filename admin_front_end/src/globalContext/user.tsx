@@ -33,7 +33,7 @@ export const UserContextProvider: React.FC<UserContextProviderProps> = ({childre
         }
         checkStatus()
 
-        },[])
+        },[user])
 return(
     <UserContext.Provider value={{user,setUser}}>
         {children}
