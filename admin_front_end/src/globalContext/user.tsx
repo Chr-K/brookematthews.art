@@ -12,6 +12,7 @@ interface UserContextProviderProps{
 }
 async function isLoggedIn(){
 const response = await fetch('api.brookematthews.art/get_admin_status')
+.then(response=>response.json())
 return(response)
 
 }

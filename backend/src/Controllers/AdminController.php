@@ -18,11 +18,14 @@ use App\Models\AdminModel;
         return($response);
     }
     function isLoggedIn(){
+        $response = array('isLoggedIn'=>false);
         if(isset($_SESSION['user_id'])){
-            return(true);
+            $response['isLoggedIn'] = true;
+            return($response);
         }
         else{
-            return(false);
+            $response['isLoggedIn'] = false;
+            return($response);
         }
     }
 }
