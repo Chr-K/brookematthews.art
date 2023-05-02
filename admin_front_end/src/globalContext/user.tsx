@@ -12,8 +12,8 @@ interface UserContextProviderProps{
 }
 async function isLoggedIn(){
 const response = await fetch('https://api.brookematthews.art/get_admin_status')
-.then(response=>response.json())
-return(response)
+const data = await response.json()
+return(data)
 
 }
 export const UserContext = createContext<UserContextInterface>({
