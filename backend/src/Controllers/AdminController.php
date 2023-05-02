@@ -19,6 +19,7 @@ use App\Models\AdminModel;
     }
     function isLoggedIn(){
         $testvar = $_SESSION['user_id'];
+        
         return($testvar);
     }
 }
