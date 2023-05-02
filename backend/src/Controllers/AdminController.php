@@ -5,9 +5,10 @@ use App\Models\AdminModel;
     private $data;
     function __construct()
     {
+        session_start();
         $json_data = file_get_contents('php://input');
-
         $this->data = json_decode($json_data,true);
+
     }
     function admin_login(){
         $model = new AdminModel();
