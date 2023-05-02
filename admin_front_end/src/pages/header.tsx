@@ -6,6 +6,7 @@ const userContext = useContext(UserContext)
 const user = userContext.user
 async function test(){
     var res = await user?.logged_in
+    .then(res=>res.json())
     console.log(res)
 }
 
