@@ -5,6 +5,7 @@ use App\Models\AdminModel;
     private $data;
     function __construct()
     {
+        header('Access-Control-Allow-Origin: https://admin.brookematthews.art');
         $json_data = file_get_contents('php://input');
         $this->data = json_decode($json_data,true);
 
@@ -19,7 +20,7 @@ use App\Models\AdminModel;
     }
     function isLoggedIn(){
         $testvar = $_SESSION['user_id'];
-        
+
         return($testvar);
     }
 }
