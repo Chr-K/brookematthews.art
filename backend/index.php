@@ -9,7 +9,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 use App\Controllers\ItemController;
 use App\Controllers\AdminController;
 session_start();
-
+echo session_id();
 $router = new Router();
 $router->addRoute('GET','/get_admin_status',new AdminController,'isLoggedIn');
 $router->addRoute('GET','/getitems',new ItemController,'get_items');

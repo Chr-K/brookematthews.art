@@ -19,15 +19,7 @@ use App\Models\AdminModel;
     }
     function isLoggedIn(){
         return (var_dump($_SESSION));
-/*        $response = array('isLoggedIn'=>false);
-        if(isset($_SESSION['user_id'])){
-            $response['isLoggedIn'] = true;
-            return($response);
-        }
-        else{
-            $response['isLoggedIn'] = false;
-            return($response);
-        } */
+
     }
 }
 
