@@ -20,12 +20,12 @@ use App\Models\AdminModel;
     }
     function isLoggedIn(){
         if(isset($_SESSION['user_id'])){
-            $result = true;
+            $result = array('status'=>true);
         }
         else{
-            $result = false;
+            $result = array('status'=>false);
         }
-        return(json_encode($result));
+        return($result);
     }
 }
 
