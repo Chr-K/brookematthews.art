@@ -13,7 +13,7 @@ interface UserContextProviderProps{
 async function isLoggedIn(){
 const response = await fetch('https://api.brookematthews.art/get_admin_status')
 const data = await response.json()
-return(data.isLoggedIn)
+return(data)
 }
 
 export const UserContext = createContext<UserContextInterface>({
@@ -25,8 +25,7 @@ export const UserContextProvider: React.FC<UserContextProviderProps> = ({childre
     useEffect(()=>{
         async function checkIsLoggedIn(){
             const status = await isLoggedIn()
-            console.log (status)
-            setUser({...user,logged_in:status})
+            setUser({...user,logged_in:status.isLoggedIn})
         }
         checkIsLoggedIn()
         },[])
