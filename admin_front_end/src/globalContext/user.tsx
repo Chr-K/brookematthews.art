@@ -11,7 +11,9 @@ interface UserContextProviderProps{
     children:React.ReactNode
 }
 async function isLoggedIn(){
-        const response = await fetch('https://api.brookematthews.art/get_admin_status')
+        const response = await fetch('https://api.brookematthews.art/get_admin_status',{
+        credentials: 'include'
+        })
         const data =  response.text()
         console.log(data)
 
