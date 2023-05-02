@@ -11,10 +11,17 @@ interface UserContextProviderProps{
     children:React.ReactNode
 }
 async function isLoggedIn(){
-const response = await fetch('https://api.brookematthews.art/get_admin_status')
-const data = await response.json()
-console.log(response)
-return(data)
+    try{
+        const response = await fetch('https://api.brookematthews.art/get_admin_status')
+        const data = await response.json()
+        console.log(data)
+        return(data)
+    }
+    catch(error){
+        console.log(error)
+    }
+
+
 }
 
 export const UserContext = createContext<UserContextInterface>({
