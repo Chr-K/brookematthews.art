@@ -1,8 +1,16 @@
 import './styles/login.css'
 import { AdminLogin } from '../services/login'
 import { email_check } from '../helpers/regex'
-import { useState } from 'react'
+import { useState,useContext, useEffect } from 'react'
+import { UserContext } from '../globalContext/user'
 export default function Login(){
+    const user = useContext(UserContext).user
+    useEffect(()=>{
+        if(user?.logged_in==true){
+            window.location.href = 'https://admin.brookematthews.art/home'
+        }
+    },[])
+
     const [FormData,setFormData] = useState({
         email:'',
         password:'',

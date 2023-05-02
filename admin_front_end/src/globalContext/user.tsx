@@ -14,9 +14,8 @@ async function isLoggedIn(){
         const response = await fetch('https://api.brookematthews.art/get_admin_status',{
         credentials: 'include'
         })
-        const data =  response.text()
-        console.log(data)
-
+        const data =  response.json()
+        return(data)
 }
 
 export const UserContext = createContext<UserContextInterface>({
