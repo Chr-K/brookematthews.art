@@ -10,12 +10,16 @@ export interface User{
 interface UserContextProviderProps{
     children:React.ReactNode
 }
+interface UserStatus{
+    status:Boolean
+}
 async function isLoggedIn(){
         const response = await fetch('https://api.brookematthews.art/get_admin_status',{
         credentials: 'include'
         })
-        const data =  response.json()
-        return(data)
+        const data = await response.json()
+        const status:UserStatus = data.status
+        return(status)
 }
 
 export const UserContext = createContext<UserContextInterface>({
