@@ -6,7 +6,6 @@ const userContext = useContext(UserContext)
 const user = userContext.user
 function test(){
     var res = user?.logged_in
-    console.log(res)
 }
 
     return(
