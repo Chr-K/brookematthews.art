@@ -14,7 +14,7 @@ class AdminModel{
             if(password_verify($password,$row['password'])){
                 $_SESSION['user_id'] = $row['id'];
                 $Token = new Token();
-                $Token->MakeToken('1','2');
+                $Token->MakeToken('1','2','admin.');
                 http_response_code(201);
                 exit();
             }
