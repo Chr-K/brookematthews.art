@@ -12,7 +12,7 @@ class AdminModel{
         if($result->num_rows>0){
             $row = $result->fetch_assoc();
             if(password_verify($password,$row['password'])){
-                $_SESSION['user_id'] = $result['id'];
+                $_SESSION['user_id'] = $row['id'];
                 $Token = new Token();
                 $Token->MakeToken('1','2');
                 http_response_code(201);
