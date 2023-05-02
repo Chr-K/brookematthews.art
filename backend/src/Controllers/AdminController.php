@@ -5,7 +5,6 @@ use App\Models\AdminModel;
     private $data;
     function __construct()
     {
-        session_start();
         $json_data = file_get_contents('php://input');
         $this->data = json_decode($json_data,true);
 
@@ -19,7 +18,7 @@ use App\Models\AdminModel;
         return($response);
     }
     function isLoggedIn(){
-        var_dump($_SESSION);
+        return (var_dump($_SESSION));
 /*        $response = array('isLoggedIn'=>false);
         if(isset($_SESSION['user_id'])){
             $response['isLoggedIn'] = true;
