@@ -4,8 +4,8 @@ import { UserContext } from "../globalContext/user"
 export default function Header(){
 const userContext = useContext(UserContext)
 const user = userContext.user
-async function test(){
-    var res = await user?.logged_in
+function test(){
+    var res = user?.logged_in
     console.log(res)
 }
 
