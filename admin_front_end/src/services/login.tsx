@@ -10,8 +10,6 @@ export async function AdminLogin(email:string,password:string){
     })
 
     if(response.ok){
-        redirect()
-
         return(response.status)
     }
     else{
@@ -21,6 +19,3 @@ export async function AdminLogin(email:string,password:string){
 }
 
 
- function redirect(){
-    window.location.href = 'https://admin.brookematthews.art/home'
-}
