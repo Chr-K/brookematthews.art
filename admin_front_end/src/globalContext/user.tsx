@@ -25,8 +25,8 @@ export const UserContextProvider: React.FC<UserContextProviderProps> = ({childre
             credentials: 'include'
             })
             const data = await response.json()
-            const status = data.status
-            setUser({logged_in:status})
+            const status = await data.status
+            setUser({logged_in:await status})
     }
     isLoggedIn()
         },[])
