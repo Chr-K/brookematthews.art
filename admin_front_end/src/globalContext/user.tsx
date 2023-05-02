@@ -12,7 +12,7 @@ interface UserContextProviderProps{
 }
 async function isLoggedIn(){
         const response = await fetch('https://api.brookematthews.art/get_admin_status')
-        const data = await response.json()
+        const data =  response
         console.log(data)
 
 }
@@ -24,9 +24,8 @@ export const UserContext = createContext<UserContextInterface>({
 export const UserContextProvider: React.FC<UserContextProviderProps> = ({children})=>{
     const [user,setUser] = useState<User | null>({logged_in:false})
     useEffect(()=>{
-        async function checkIsLoggedIn(){
-        }
-        checkIsLoggedIn()
+        isLoggedIn()
+
         },[])
 return(
     <UserContext.Provider value={{user,setUser}}>
