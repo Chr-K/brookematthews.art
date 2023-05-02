@@ -8,7 +8,7 @@ export default function Login(){
     useEffect(()=>{
         console.log(user)
 
-    },[])
+    },[user])
 
     const [FormData,setFormData] = useState({
         email:'',
