@@ -17,6 +17,7 @@ async function isLoggedIn(){
         })
         const data = await response.json()
         const status = data.status
+        console.log(status)
         return(status)
 }
 
@@ -32,7 +33,6 @@ export const UserContextProvider: React.FC<UserContextProviderProps> = ({childre
             setUser({logged_in:state})
         }
         checkStatus()
-        console.log(user?.logged_in)
         },[])
 return(
     <UserContext.Provider value={{user,setUser}}>
