@@ -7,7 +7,8 @@ export default function Home(){
         <div className="home_nav_panel">
             <Link to={'/edit_shop'}><button className='button-primary text-primary white'>Edit Shop</button></Link>
         <button className='button-primary text-primary white'>Order Management</button>
-        <button className='button-primary text-primary white'> Messages</button> 
+        <button className='button-primary text-primary white'> Messages</button>
+        <button className='button-primary text-primary white'>Logout</button>
         </div>
     </div>
     
