@@ -10,5 +10,6 @@ button{
 }
 .button-primary{
     width:15rem;
+    height:4rem;
     background-color: purple;
 }

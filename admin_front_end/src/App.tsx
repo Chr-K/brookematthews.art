@@ -3,15 +3,18 @@ import './styles/App.css'
 import './styles/text.css'
 import './styles/inputs.css'
 import './styles/buttons.css'
+import {UserContextProvider } from './globalContext/user'
+import Header from './pages/header'
 function App() {
 
   return (
+<UserContextProvider>
+  <Header></Header>
 <div className='container'>
-<div className='header title'>
-ADMIN PANEL
-</div>
+
 <Outlet></Outlet>
 </div>
+</UserContextProvider>
   )
 }
 

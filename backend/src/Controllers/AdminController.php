@@ -17,6 +17,14 @@ use App\Models\AdminModel;
         $response = $model->Login($email,$password);
         return($response);
     }
+    function isLoggedIn(){
+        if(isset($_SESSION['user_id'])){
+            return(true);
+        }
+        else{
+            return(false);
+        }
+    }
 }
 
 ?>
