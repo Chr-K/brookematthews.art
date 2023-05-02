@@ -25,7 +25,7 @@ use App\Models\AdminModel;
         else{
             $result = false;
         }
-        return($result);
+        return(json_encode($result));
     }
 }
 
