@@ -6,6 +6,7 @@ export async function AdminLogin(email:string,password:string){
 
     const response = await fetch('https://api.brookematthews.art/adminlogin',{
     method:'POST',
+    credentials:'include',
     body: JSON.stringify(data)
     })
 
