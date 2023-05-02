@@ -29,7 +29,7 @@ export const UserContextProvider: React.FC<UserContextProviderProps> = ({childre
     useEffect(()=>{
         async function checkStatus(){
             const state:any = await isLoggedIn()
-            setUser({...user,logged_in: state})
+            setUser({logged_in: state})
         }
         checkStatus()
 

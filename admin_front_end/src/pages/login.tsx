@@ -7,9 +7,7 @@ export default function Login(){
     const user = useContext(UserContext).user
     useEffect(()=>{
         console.log(user)
-        if(user?.logged_in==true){
-            window.location.href = 'https://admin.brookematthews.art/home'
-        }
+
     },[])
 
     const [FormData,setFormData] = useState({
