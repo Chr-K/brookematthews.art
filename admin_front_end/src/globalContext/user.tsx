@@ -5,7 +5,7 @@ interface UserContextInterface{
     setUser: React.Dispatch<React.SetStateAction<User | null>>
 }
 export interface User{
-    logged_in:Promise<boolean>
+    logged_in:Promise<Response>
 }
 interface UserContextProviderProps{
     children:React.ReactNode
