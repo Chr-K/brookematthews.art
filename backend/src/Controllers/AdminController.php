@@ -18,7 +18,7 @@ use App\Models\AdminModel;
         return($response);
     }
     function isLoggedIn(){
-        return (var_dump($_SESSION));
+        return (json_encode(var_dump($_SESSION)));
 
     }
 }
