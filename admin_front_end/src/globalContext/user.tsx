@@ -17,6 +17,7 @@ async function isLoggedIn(){
         })
         const data = await response.json()
         const status = data.status
+        console.log (status)
         return(status)
 }
 
