@@ -28,11 +28,8 @@ class Token{
             return($decoded);
         }
         catch(Exception $e){
-            if (isset($decoded->exp) && time() > $decoded->exp) {
-                echo 'Token expired';
-                return null;
-            }
-            echo 'Invalid JWT';
+
+            echo $e;
         }
     }
 }
