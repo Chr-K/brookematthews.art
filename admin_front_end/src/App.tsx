@@ -15,9 +15,9 @@ useEffect(()=>{
           window.location.href = 'https://admin.brookematthews.art/'
       }
   }
-  check_status()
+   check_status()
 
-},[user])
+},[])
   return (
 <UserContextProvider>
 <Header></Header>
