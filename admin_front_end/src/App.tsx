@@ -11,7 +11,7 @@ function App() {
   const user = useContext(UserContext).user
   useEffect(()=>{
     if(!user?.logged_in){
-      redirect('')
+      window.location.href = 'https://admin.brookematthews.com'
     }
     console.log(user?.logged_in)
   },[user])
