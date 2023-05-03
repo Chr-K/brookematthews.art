@@ -9,6 +9,7 @@ class Token{
     function __construct()
     {
         $this->key = getenv('SECRET_KEY');
+        echo $this->key;
     }
     function MakeToken($id,$email){
 
