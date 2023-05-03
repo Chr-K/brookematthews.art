@@ -14,6 +14,7 @@ function App() {
     if(!user?.logged_in){
       redirect('')
     }
+    console.log(user)
   },[user])
   return (
 <UserContextProvider>
