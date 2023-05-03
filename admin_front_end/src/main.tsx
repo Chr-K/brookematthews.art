@@ -33,7 +33,7 @@ element:<App></App>,
 children:[
   {
     path:'',
-    element:homePath
+    element:{homePath}
   },
   {
     path:'/home',
