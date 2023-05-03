@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\AdminModel;
+use app\Helpers\Token;
  class AdminController{
     private $data;
     function __construct()
@@ -25,8 +26,8 @@ use App\Models\AdminModel;
     function isLoggedIn(){
         if(isset($_SESSION['user_id'])){
             $result = array('status'=>true);
-            echo $_COOKIE['jwt'];
-
+            $cookie_token = new Token;
+            echo $cookie_token->DecodeToken();
             return($result);
 
         }
