@@ -6,7 +6,7 @@ import { UserContext } from '../globalContext/user'
 export default function Home(){
     const user = useContext(UserContext).user
     useEffect(()=>{
-        if(!user?.logged_in){
+        if(user?.logged_in == false){
             window.location.href = 'https://admin.brookematthews.art'
         }
     },[user])
