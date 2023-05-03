@@ -3,7 +3,6 @@ import './styles/App.css'
 import './styles/text.css'
 import './styles/inputs.css'
 import './styles/buttons.css'
-import {UserContextProvider} from './globalContext/user'
 import Header from './pages/header'
 import { useEffect } from 'react'
 import { useContext } from 'react'
@@ -17,12 +16,13 @@ function App() {
     console.log(user)
   },[user])
   return (
-<UserContextProvider>
-<Header></Header>
+    <div>
+    <Header></Header>
 <div className='container'>
   <Outlet></Outlet>
-</div>
-</UserContextProvider>
+</div>  
+    </div>
+
   )
 }
 
