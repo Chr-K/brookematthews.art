@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, redirect } from 'react-router-dom'
 import './styles/App.css'
 import './styles/text.css'
 import './styles/inputs.css'
@@ -13,8 +13,10 @@ function App() {
       const response = await fetch('https://api.brookematthews.com/get_admin_status')
       const data = await response.json()
       if(!data.status){
-        window.location.href = 'https://admin.brookematthews.art'
+        redirect('')
       }
+      console.log(data)
+
     }
     Status()
   },[])
