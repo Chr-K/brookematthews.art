@@ -26,7 +26,14 @@ export const UserContextProvider: React.FC<UserContextProviderProps> = ({childre
             })
             const data = await response.json()
             const status = await data.status
+            if(await status ===false){
+                window.location.href = ''
+            }
+            else{
+                
+            }
             setUser({logged_in:await status})
+
     }
     isLoggedIn()
         },[])
