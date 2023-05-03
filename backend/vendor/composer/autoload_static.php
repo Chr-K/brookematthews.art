@@ -29,20 +29,7 @@ class ComposerStaticInit23e63df9f6ad8f6c1df8ebaa8f981bc4
     );
 
     public static $classMap = array (
-        'App\\Controllers\\AdminController' => __DIR__ . '/../..' . '/src/Controllers/AdminController.php',
-        'App\\Controllers\\ItemController' => __DIR__ . '/../..' . '/src/Controllers/ItemController.php',
-        'App\\Controllers\\RedirectController' => __DIR__ . '/../..' . '/src/Controllers/RedirectController.php',
-        'App\\Helpers\\Token' => __DIR__ . '/../..' . '/src/Helpers/Token.php',
-        'App\\Models\\AdminModel' => __DIR__ . '/../..' . '/src/Models/AdminModel.php',
-        'App\\Models\\ItemModel' => __DIR__ . '/../..' . '/src/Models/ItemModel.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Firebase\\JWT\\BeforeValidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/BeforeValidException.php',
-        'Firebase\\JWT\\CachedKeySet' => __DIR__ . '/..' . '/firebase/php-jwt/src/CachedKeySet.php',
-        'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',
-        'Firebase\\JWT\\JWK' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWK.php',
-        'Firebase\\JWT\\JWT' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWT.php',
-        'Firebase\\JWT\\Key' => __DIR__ . '/..' . '/firebase/php-jwt/src/Key.php',
-        'Firebase\\JWT\\SignatureInvalidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/SignatureInvalidException.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
