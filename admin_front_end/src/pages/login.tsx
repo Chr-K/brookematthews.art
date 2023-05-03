@@ -5,15 +5,6 @@ import { useState,useContext, useEffect } from 'react'
 import { UserContext } from '../globalContext/user'
 export default function Login(){
     const user = useContext(UserContext).user
-    useEffect(()=>{
-        async function check_status(){
-            if(user?.logged_in){
-                window.location.href = 'https://admin.brookematthews.art/home'
-            }
-        }
-        check_status()
-
-    },[user])
 
     const [FormData,setFormData] = useState({
         email:'',
