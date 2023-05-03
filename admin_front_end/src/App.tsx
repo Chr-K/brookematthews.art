@@ -5,14 +5,19 @@ import './styles/inputs.css'
 import './styles/buttons.css'
 import {UserContextProvider,UserContext } from './globalContext/user'
 import Header from './pages/header'
-import { useContext,useEffect } from 'react'
+import Login from './pages/login'
+import { ReactNode, useContext,useEffect, useState } from 'react'
 
 function App() {
+const [user_status,setUser_status] = useState<ReactNode>()
 const user = useContext(UserContext).user
 useEffect(()=>{
   async function check_status(){
-      if(!user?.logged_in && window.location.href!=='https://admin.brookematthews.art/'){
-          window.location.href = 'https://admin.brookematthews.art/'
+      if(!user?.logged_in){
+        setUser_status(<Outlet></Outlet>)
+      }
+      else{
+        setUser_status(<Login></Login>)
       }
   }
    check_status()
@@ -22,7 +27,7 @@ useEffect(()=>{
 <UserContextProvider>
 <Header></Header>
 <div className='container'>
-<Outlet></Outlet>
+  {user_status}
 </div>
 </UserContextProvider>
   )
