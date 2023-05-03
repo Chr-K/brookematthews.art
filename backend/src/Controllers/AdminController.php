@@ -27,7 +27,8 @@ use App\Helpers\Token;
         if(isset($_SESSION['user_id'])){
             $result = array('status'=>true);
             $cookie_token = new Token;
-            echo $cookie_token->DecodeToken();
+            $test= $cookie_token->DecodeToken();
+            echo json_encode($test);
             return($result);
 
         }
