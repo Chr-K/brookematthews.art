@@ -13,7 +13,7 @@ function App() {
     if(!user?.logged_in){
       redirect('')
     }
-    console.log(user)
+    console.log(user?.logged_in)
   },[user])
   return (
     <div>
