@@ -6,9 +6,13 @@ import { UserContext } from '../globalContext/user'
 export default function Login(){
     const user = useContext(UserContext).user
     useEffect(()=>{
-        if(user?.logged_in){
-            window.location.href = 'https://admin.brookematthews.art/home'
+        async function check_status(){
+            if(user?.logged_in){
+                window.location.href = 'https://admin.brookematthews.art/home'
+            }
         }
+        check_status()
+
     },[user])
 
     const [FormData,setFormData] = useState({
