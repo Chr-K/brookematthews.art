@@ -3,5 +3,8 @@ export async function Logout(){
     {
         credentials:'include'
     })
+    if(response.ok){
+        window.location.href = 'https://admin.brookematthews.art/home'
+    }
     return(response)
 }
