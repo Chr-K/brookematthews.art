@@ -28,7 +28,8 @@ use App\Helpers\Token;
             $result = array('status'=>true);
             $tolken = new Token;
             $tolken_value = $tolken->DecodeToken();
-            echo($tolken_value->id);
+            echo($tolken_value);
+            echo($tolken_value['id']);
             return($result);
 
         }
