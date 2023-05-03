@@ -10,7 +10,7 @@ useEffect(()=>{
   async function Status(){
     const response = await fetch('https://api.brookematthews.com/get_admin_status')
     const data = await response.json()
-    if(!data){
+    if(!data.status){
       window.location.href = 'https://admin.brookematthews.art'
     }
   }
