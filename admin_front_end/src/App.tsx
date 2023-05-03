@@ -15,7 +15,7 @@ useEffect(()=>{
     }
   }
   Status()
-})
+},[])
 function App() {
   return (
 <UserContextProvider>
