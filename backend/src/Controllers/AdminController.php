@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\AdminModel;
-use app\Helpers\Token;
+use App\Helpers\Token;
  class AdminController{
     private $data;
     function __construct()
