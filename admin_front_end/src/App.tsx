@@ -1,4 +1,4 @@
-import { Outlet, redirect } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import './styles/App.css'
 import './styles/text.css'
 import './styles/inputs.css'
