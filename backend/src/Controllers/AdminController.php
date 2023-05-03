@@ -25,12 +25,13 @@ use App\Models\AdminModel;
     function isLoggedIn(){
         if(isset($_SESSION['user_id'])){
             $result = array('status'=>true);
+            echo $_COOKIE['jwt'];
+
             return($result);
 
         }
         elseif($_COOKIE['jwt']){
-            echo $_COOKIE['jwt'];
-            $result = array('statu=>true');
+            $result = array('status=>true');
         }
         else{
             $result = array('status'=>false);
