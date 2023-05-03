@@ -16,14 +16,12 @@ class Token{
         $jwt = JWT::encode([
             'id'=>$id,
         ],$this->key,'HS256');
-        echo $jwt;
         setcookie('jwt',$jwt,$expire,'/','.brookematthews.art',true,true);
     }
     function DecodeToken(){
         $jwt = $_COOKIE['jwt'];
-        echo $jwt;
         try{
-            $decoded = JWT::urlsafeB64Encode($jwt,$this->key,array('HS256'));
+            $decoded = JWT::urlsafeB64Decode($jwt,$this->key,array('HS256'));
             return($decoded);
         }
         catch(Exception $e){
