@@ -11,7 +11,7 @@ function App() {
 const user = useContext(UserContext).user
 useEffect(()=>{
   async function check_status(){
-      if(!user?.logged_in){
+      if(!user?.logged_in && window.location.href!=='https://admin.brookematthews.art/'){
           window.location.href = 'https://admin.brookematthews.art/'
       }
   }

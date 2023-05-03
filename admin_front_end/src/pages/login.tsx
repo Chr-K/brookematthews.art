@@ -8,6 +8,7 @@ export default function Login(){
     useEffect(()=>{
         async function check_status(){
             if(user?.logged_in){
+                window.location.href = 'https://admin.brookematthews.art/home'
             }
         }
         check_status()
