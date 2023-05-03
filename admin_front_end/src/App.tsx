@@ -14,7 +14,7 @@ function App() {
     if(!user?.logged_in){
       redirect('')
     }
-  },[])
+  },[user])
   return (
 <UserContextProvider>
 <Header></Header>
