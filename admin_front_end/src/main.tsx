@@ -9,7 +9,7 @@ import { useState} from 'react'
 const [homePath,setHomePath] = useState(<Login></Login>)
 useEffect(()=>{
   async function userStatus(){
-    const response = fetch('https://api.brookematthews.art/get_admin_status',
+    const response = await fetch('https://api.brookematthews.art/get_admin_status',
     {credentials:'include'}
     )
     const data = await response.json()
