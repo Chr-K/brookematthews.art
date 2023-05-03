@@ -14,6 +14,7 @@ useEffect(()=>{
       window.location.href = 'https://admin.brookematthews.art'
     }
   }
+  Status()
 })
 function App() {
   return (
