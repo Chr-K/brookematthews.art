@@ -29,6 +29,9 @@ export const UserContextProvider: React.FC<UserContextProviderProps> = ({childre
             if(status == false && window.location.href !== 'https://admin.brookematthews.art/'){
                 window.location.href = 'https://admin.brookematthews.art/'
             }
+            if(status == true && window.location.href == 'https://admin.brookematthews.art/'){
+                window.location.href = 'https://admin.brookematthews.art/home'
+            }
             setUser({logged_in:await status})
 
     }
