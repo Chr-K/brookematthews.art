@@ -29,7 +29,7 @@ class Token{
             return($decoded);
         }
         catch(Exception $e){
-            echo 'Invalid JWT';
+            echo 'Invalid JWT' . $e->getMessage();
         }
     }
 }
