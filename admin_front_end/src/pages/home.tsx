@@ -1,18 +1,8 @@
 import './styles/home.css'
 import { Link } from 'react-router-dom'
 import { Logout } from '../services/logout'
-import { useContext, useEffect } from 'react'
-import { UserContext } from '../globalContext/user'
 export default function Home(){
-    const user = useContext(UserContext).user
-    useEffect(()=>{
-        async function status(){
-            if(!user?.logged_in){
-                window.location.href = 'https://admin.brookematthews.art'
-            }
-        }
-        status()
-    },[user])
+
     return(
     <div className="home_container">
         <div className="home_nav_panel">
