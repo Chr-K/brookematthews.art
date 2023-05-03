@@ -10,7 +10,7 @@ import { UserContext } from './globalContext/user'
 function App() {
   const user = useContext(UserContext).user
   useEffect(()=>{
-    if(user?.logged_in == false && window.location.href != 'https://admin.brookematthews.art'){
+    if(user?.logged_in == false && window.location.href != 'https://admin.brookematthews.art/'){
     console.log(window.location)
     }
     console.log(user?.logged_in)
