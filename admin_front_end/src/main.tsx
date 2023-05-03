@@ -5,7 +5,6 @@ import {Login, Home,Edit_Shop} from './pages/barrel.tsx'
 import './styles/index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { UserContextProvider } from './globalContext/user.tsx'
-
 const router = createBrowserRouter([
 {
 path:'',

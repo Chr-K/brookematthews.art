@@ -2,7 +2,6 @@ import './styles/home.css'
 import { Link } from 'react-router-dom'
 import { Logout } from '../services/logout'
 export default function Home(){
-
     return(
     <div className="home_container">
         <div className="home_nav_panel">
