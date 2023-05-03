@@ -11,6 +11,7 @@ export async function AdminLogin(email:string,password:string){
     })
 
     if(response.ok){
+        window.location.href = 'https://admin.brookematthews.art/home'
         return(response.status)
     }
     else{
