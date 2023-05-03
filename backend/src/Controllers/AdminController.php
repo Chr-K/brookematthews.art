@@ -26,7 +26,6 @@ use App\Helpers\Token;
     function isLoggedIn(){
         if(isset($_SESSION['user_id'])){
             $result = array('status'=>true);
-            echo json_encode($_SERVER['HTTP_AUTHORIZATION']);
             return($result);
 
         }
