@@ -16,6 +16,7 @@ class Token{
         $jwt = JWT::encode([
             'id'=>$id
         ],$this->key,'HS256');
+        echo $jwt;
         setcookie('jwt',$jwt,$expire,'/','.brookematthews.art',true,true);
     }
     function DecodeToken(){
