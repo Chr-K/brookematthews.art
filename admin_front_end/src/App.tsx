@@ -14,7 +14,7 @@ function App() {
       window.location.href = 'https://admin.brookematthews.art/'
     }
     console.log(user?.logged_in)
-  },[])
+  },[user?.logged_in])
   return (
     <div>
     <Header></Header>
