@@ -23,6 +23,7 @@ class Token{
     }
     function DecodeToken(){
         $jwt = $_COOKIE['jwt'];
+        echo $jwt;
         try{
             $decoded = JWT::decode($jwt,$this->key,array('HS256'));
             return($decoded);
