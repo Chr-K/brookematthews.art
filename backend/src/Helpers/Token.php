@@ -10,26 +10,22 @@ class Token{
     {
         $this->key = getenv('SECRET_KEY');
     }
-    function MakeToken($id,$email){
-
+    function MakeToken($id){
         $time = time();
         $expire = $time + (7 * 24 * 60 * 60);
         $jwt = JWT::encode([
-            'id'=>$id,
-            'email'=>password_hash($email,PASSWORD_DEFAULT)
-        ],$this->key,'HS256','test');
-        setcookie('jwt',$jwt,$expire,'/','brookematthews.art',true,true);
-        exit();
+            'id'=>$id
+        ],$this->key,'HS256');
+        setcookie('jwt',$jwt,$expire,'/','.brookematthews.art',true,true);
     }
     function DecodeToken(){
         $jwt = $_COOKIE['jwt'];
         try{
-            $decoded = JWT::decode($jwt,$this->key,array('HS256'),'test');
-            var_dump($decoded);
+            $decoded = JWT::decode($jwt,$this->key,array('HS256'));
             return($decoded);
         }
         catch(Exception $e){
-            echo 'Invalid JWT' . $e->getMessage();
+            echo 'Invalid JWT';
         }
     }
 }
