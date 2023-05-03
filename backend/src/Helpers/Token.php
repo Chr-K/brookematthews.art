@@ -15,13 +15,13 @@ class Token{
         $expire = $time + (7 * 24 * 60 * 60);
         $jwt = JWT::encode([
             'id'=>$id,
-        ],$this->key,'HS256');
+        ],$this->key,'HS256',null,['kid'=>'test']);
         setcookie('jwt',$jwt,$expire,'/','.brookematthews.art',true,true);
     }
     function DecodeToken(){
         $jwt = $_COOKIE['jwt'];
         try{
-            $decoded = JWT::decode($jwt,$this->key,array('HS256'));
+            $decoded = JWT::decode($jwt,$this->key,array('HS256'),'test');
             return $decoded;
         }
         catch(Exception $e){
