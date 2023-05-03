@@ -26,9 +26,7 @@ use App\Helpers\Token;
     function isLoggedIn(){
         if(isset($_SESSION['user_id'])){
             $result = array('status'=>true);
-            $cookie_token = new Token;
-            $test= $cookie_token->DecodeToken();
-            echo json_encode($test->id);
+            echo json_encode($_COOKIE['jwt']);
             return($result);
 
         }
