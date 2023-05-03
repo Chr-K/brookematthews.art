@@ -22,7 +22,7 @@ useEffect(()=>{
   }
    check_status()
 
-},[user_status])
+},)
   return (
 <UserContextProvider>
 <Header></Header>
