@@ -19,6 +19,7 @@ class Token{
             'email'=>password_hash($email,PASSWORD_DEFAULT)
         ],$this->key,'HS256');
         setcookie('jwt',$jwt,$expire,'/','https:brookematthews.art',true,true);
+        exit();
     }
     function DecodeToken(){
         $jwt = $_COOKIE['jwt'];

@@ -15,9 +15,7 @@ export default function Login(){
                 const response = await AdminLogin(FormData.email,FormData.password)
             return(response)
         }
-        else{
-            //email format invalid
-        }
+
     }
 
     return(

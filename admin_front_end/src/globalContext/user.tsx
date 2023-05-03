@@ -33,7 +33,6 @@ export const UserContextProvider: React.FC<UserContextProviderProps> = ({childre
                 window.location.href = 'https://admin.brookematthews.art/home'
             }
             setUser({logged_in:await status})
-
     }
     isLoggedIn()
         },[])
