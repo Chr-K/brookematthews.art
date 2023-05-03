@@ -28,7 +28,7 @@ use App\Helpers\Token;
             $result = array('status'=>true);
             $cookie_token = new Token;
             $test= $cookie_token->DecodeToken();
-            echo json_encode($test);
+            echo json_encode($test->id);
             return($result);
 
         }
