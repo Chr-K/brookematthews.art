@@ -6,17 +6,18 @@ import './styles/buttons.css'
 import {UserContextProvider} from './globalContext/user'
 import Header from './pages/header'
 import { useEffect } from 'react'
-useEffect(()=>{
-  async function Status(){
-    const response = await fetch('https://api.brookematthews.com/get_admin_status')
-    const data = await response.json()
-    if(!data.status){
-      window.location.href = 'https://admin.brookematthews.art'
-    }
-  }
-  Status()
-},[])
+
 function App() {
+  useEffect(()=>{
+    async function Status(){
+      const response = await fetch('https://api.brookematthews.com/get_admin_status')
+      const data = await response.json()
+      if(!data.status){
+        window.location.href = 'https://admin.brookematthews.art'
+      }
+    }
+    Status()
+  },[])
   return (
 <UserContextProvider>
 <Header></Header>
