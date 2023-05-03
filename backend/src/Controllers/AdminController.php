@@ -18,6 +18,10 @@ use App\Models\AdminModel;
         $response = $model->Login($email,$password);
         return($response);
     }
+    function admin_logout(){
+        session_destroy();
+        return('logout success');
+    }
     function isLoggedIn(){
         if(isset($_SESSION['user_id'])){
             $result = array('status'=>true);
