@@ -9,15 +9,7 @@ import { useContext,useEffect } from 'react'
 
 function App() {
 const user = useContext(UserContext).user
-useEffect(()=>{
-  async function check_status(){
-      if(!user?.logged_in){
-          window.location.href = 'https://admin.brookematthews.art/'
-      }
-  }
-  check_status()
 
-},[user])
   return (
 <UserContextProvider>
 <Header></Header>
