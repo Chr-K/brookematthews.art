@@ -5,7 +5,16 @@ import './styles/inputs.css'
 import './styles/buttons.css'
 import {UserContextProvider} from './globalContext/user'
 import Header from './pages/header'
-
+import { useEffect } from 'react'
+useEffect(()=>{
+  async function Status(){
+    const response = await fetch('https://api.brookematthews.com/get_admin_status')
+    const data = response.json()
+    if(!data){
+      window.location.href = 'https://admin.brookematthews.art'
+    }
+  }
+})
 function App() {
   return (
 <UserContextProvider>
