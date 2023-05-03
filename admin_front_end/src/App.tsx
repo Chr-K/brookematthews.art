@@ -17,7 +17,7 @@ useEffect(()=>{
   }
    check_status()
 
-},[])
+},[user!.logged_in])
   return (
 <UserContextProvider>
 <Header></Header>

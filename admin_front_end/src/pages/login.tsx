@@ -1,18 +1,9 @@
 import './styles/login.css'
 import { AdminLogin } from '../services/login'
 import { email_check } from '../helpers/regex'
-import { useState,useContext, useEffect } from 'react'
-import { UserContext } from '../globalContext/user'
+import { useState} from 'react'
 export default function Login(){
-    const user = useContext(UserContext).user
-    useEffect(()=>{
-        async function check_status(){
-            if(user?.logged_in){
-            }
-        }
-        check_status()
 
-    },[user])
 
     const [FormData,setFormData] = useState({
         email:'',
