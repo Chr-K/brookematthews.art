@@ -27,7 +27,6 @@ export const UserContextProvider: React.FC<UserContextProviderProps> = ({childre
             const data = await response.json()
             const status = await data.status
             if(status == false && window.location.href !== 'https://admin.brookematthews.art/'){
-                window.location.href = 'https://admin.brookematthews.art/'
             }
             if(status == true && window.location.href == 'https://admin.brookematthews.art/'){
                 window.location.href = 'https://admin.brookematthews.art/home'
