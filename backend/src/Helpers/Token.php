@@ -21,7 +21,7 @@ class Token{
 
         $jwt = $_COOKIE['jwt'];
             try {
-                $decoded = JWT::decode($jwt,getenv('PUBLIC_KEY'));
+                $decoded = JWT::decode($jwt,$publickey);
                 return $decoded;
             } catch (Exception $e) {
                 echo 'Invalid JWT: ' . $e->getMessage();
