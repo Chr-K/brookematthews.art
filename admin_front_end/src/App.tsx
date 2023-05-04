@@ -9,8 +9,8 @@ import { useEffect, useState } from 'react'
 
 function App() {
   const [page,setPage] = useState(
-  <div>
-  </div>)
+    <Outlet></Outlet>
+    )
   useEffect(()=>{
     async function status(){
       const response = await fetch('https://api.brookematthews.art/get_admin_status')
