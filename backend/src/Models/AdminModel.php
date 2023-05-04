@@ -29,7 +29,7 @@ class AdminModel{
     function Logout(){
         $token = new Token();
         $tokenDecoded= $token->DecodeToken();
-        $createdAt = $tokenDecoded['iat'];
+        $createdAt = $tokenDecoded->iat;
         $expire = $createdAt + (7 * 24 * 60 * 60);
         session_destroy();
         setcookie('jwt','',$expire,'/','.brookematthews.art',true,true);
