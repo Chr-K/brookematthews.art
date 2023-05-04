@@ -17,6 +17,8 @@ class Token{
         setcookie('jwt',$jwt,$expire,'/','.brookematthews.art',true,true);
     }
     function DecodeToken(){
+        $publickey = file_get_contents(getenv('PUBLIC_KEY'));
+
         $jwt = $_COOKIE['jwt'];
             try {
                 $decoded = JWT::decode($jwt,getenv('PUBLIC_KEY'));
