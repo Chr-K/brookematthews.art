@@ -3,6 +3,7 @@ namespace App\Helpers;
 
 use Exception;
 use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
 class Token{
     function MakeToken($id){
         $privkey = file_get_contents(getenv('PRIVATE_KEY'));
@@ -18,10 +19,9 @@ class Token{
     }
     function DecodeToken(){
         $publickey = file_get_contents(getenv('PUBLIC_KEY'));
-
         $jwt = $_COOKIE['jwt'];
             try {
-                $decoded = JWT::decode($jwt,$publickey);
+                $decoded = JWT::decode($jwt,new Key($publickey,'RS256'));
                 return $decoded;
             } catch (Exception $e) {
                 echo 'Invalid JWT: ' . $e->getMessage();
