@@ -7,7 +7,7 @@ class Token{
     private $key;
     function __construct()
     {
-        $this->key = getenv('Private_Key');
+        $this->key = getenv('PRIVATE_KEY');
     }
     function MakeToken($id){
         $time = time();
@@ -20,7 +20,7 @@ class Token{
     function DecodeToken(){
         $jwt = $_COOKIE['jwt'];
             try {
-                $decoded = JWT::decode($jwt,getenv('Public_Key'));
+                $decoded = JWT::decode($jwt,getenv('PUBLIC_KEY'));
                 return $decoded;
             } catch (Exception $e) {
                 echo 'Invalid JWT: ' . $e->getMessage();
