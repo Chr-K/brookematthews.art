@@ -12,10 +12,16 @@ class Token{
     function MakeToken($id){
         $time = time();
         $expire = $time + (7 * 24 * 60 * 60);
+        echo $this->key;
+        /*
+         
         $jwt = JWT::encode([
-            'id'=>$id,
+        'id'=>$id,
         ],$this->key,'RS256');
-        setcookie('jwt',$jwt,$expire,'/','.brookematthews.art',true,true);
+                setcookie('jwt',$jwt,$expire,'/','.brookematthews.art',true,true);
+
+         */
+        
     }
     function DecodeToken(){
         $jwt = $_COOKIE['jwt'];
