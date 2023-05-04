@@ -26,7 +26,7 @@ class Token{
             } catch (Exception $e) {
                 echo 'Invalid JWT: ' . $e->getMessage();
                 http_response_code(401);
-                exit();
+                return(false);
             }
 
     }

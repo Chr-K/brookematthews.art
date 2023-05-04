@@ -24,16 +24,21 @@ use App\Helpers\Token;
         $response = $model->Logout();
         return($response);
     }
-    function isLoggedIn(){
-        if(isset($_SESSION['user_id'])){
-            $result = array('status'=>true);
+    function isLoggedIn(){  
+        if(isset($_COOKIE['jwt'])){
+            $token = new Token();
+            $decoded = $token->DecodeToken();
+            if($decoded){
+                $result = array('status'=>true);
+            }
+            else{
+                $result = array('status'=>false);
+
+            }
             return($result);
 
         }
-        elseif($_COOKIE['jwt']){
-            $result = array('status=>true');
-            return $result;
-        }
+
         else{
             $result = array('status'=>false);
             return($result);
