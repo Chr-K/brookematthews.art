@@ -27,9 +27,6 @@ use App\Helpers\Token;
     function isLoggedIn(){
         if(isset($_SESSION['user_id'])){
             $result = array('status'=>true);
-            $token = new Token;
-            $tokenValue = $token->DecodeToken();
-            echo($tokenValue);
             return($result);
 
         }
