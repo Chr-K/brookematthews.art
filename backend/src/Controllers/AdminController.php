@@ -21,8 +21,8 @@ use App\Helpers\Token;
     }
     function admin_logout(){
         $model = new AdminModel();
-        $model->Logout();
-        return('logout success');
+        $response = $model->Logout();
+        return($response);
     }
     function isLoggedIn(){
         if(isset($_SESSION['user_id'])){
