@@ -20,8 +20,10 @@ use App\Helpers\Token;
         return($response);
     }
     function admin_logout(){
+        $expire = time() + (7 * 24 * 60 * 60);
+
         session_destroy();
-        setcookie("jwt","",time()-3600,"brookematthews.art",true,true);
+        setcookie("jwt","",time()-$expire,"brookematthews.art",true,true);
         return('logout success');
     }
     function isLoggedIn(){
