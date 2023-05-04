@@ -34,6 +34,7 @@ use App\Helpers\Token;
         }
         elseif($_COOKIE['jwt']){
             $result = array('status=>true');
+            return $result;
         }
         else{
             $result = array('status'=>false);
