@@ -5,7 +5,7 @@ use Exception;
 use Firebase\JWT\JWT;
 class Token{
     function MakeToken($id){
-        $privkey = getenv('PRIVATE_KEY');
+        $privkey = file_get_contents(getenv('PRIVATE_KEY'));
         $time = time();
         $expire = $time + (7 * 24 * 60 * 60);
         $jwt = JWT::encode([
