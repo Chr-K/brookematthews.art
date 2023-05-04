@@ -25,7 +25,7 @@ class Token{
         echo json_encode($header['kid']);
         if (isset($header['kid']) && $header['kid'] === 'test') {
             try {
-                $decoded = JWT::decode($jwt, $this->key, array('HS256'),'test');
+                $decoded = JWT::decode($jwt, $this->key, array('HS256'),$header['kid']);
                 return $decoded;
             } catch (Exception $e) {
                 echo 'Invalid JWT: ' . $e->getMessage();
