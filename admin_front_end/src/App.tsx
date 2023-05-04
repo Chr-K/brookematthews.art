@@ -10,7 +10,6 @@ import { useEffect, useState } from 'react'
 function App() {
   const [page,setPage] = useState(
   <div>
-    Loading...
   </div>)
   useEffect(()=>{
     async function status(){
