@@ -5,32 +5,41 @@ import './styles/inputs.css'
 import './styles/buttons.css'
 import Header from './pages/header'
 import Login from './pages/login'
-import { UserContext } from './globalContext/user'
-import { useContext } from 'react'
+import { useEffect, useState } from 'react'
+
 function App() {
-const user = useContext(UserContext).user?.logged_in
-if(user){
-  return (
-    <div>
-    <Header></Header>
-<div className='container'>
-  <Outlet></Outlet>
-</div>  
-    </div>
+  const [page,setPage] = useState(
+  <div>
+    Loading...
+  </div>)
+  useEffect(()=>{
+    async function status(){
+      const response = await fetch('https://api.brookematthews.art/get_admin_status')
+      if(response.status){
+        setPage (
+          <div>
+          <Header></Header>
+      <div className='container'>
+        <Outlet></Outlet>
+      </div>  
+          </div>
+        )
+      }
+      else{
+        setPage (
+          <div>
+          <Header></Header>
+      <div className='container'>
+        <Login></Login>
+      </div>  
+          </div>
+        )
+      }
+    }
+    status()
+  },[])
 
-  )
-}
-else{
-  return (
-    <div>
-    <Header></Header>
-<div className='container'>
-  <Login></Login>
-</div>  
-    </div>
-
-  )
-}
+  return(page)
 
 }
 
