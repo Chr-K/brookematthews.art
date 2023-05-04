@@ -21,7 +21,7 @@ use App\Helpers\Token;
     }
     function admin_logout(){
         session_destroy();
-        setcookie("jwt","",-3600,"brookematthews.art");
+        setcookie("jwt","",time()-3600,"brookematthews.art");
         return('logout success');
     }
     function isLoggedIn(){
