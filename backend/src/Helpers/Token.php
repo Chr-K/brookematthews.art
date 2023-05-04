@@ -22,7 +22,7 @@ class Token{
         list($headerB64, $payloadB64, $signatureB64) = explode('.', $jwt);
         $headerJson = JWT::urlsafeB64Decode($headerB64);
         $header = json_decode($headerJson, true);
-        echo $headerJson['kid'];
+        echo json_encode($header['kid']);
         if (isset($header['kid']) && $header['kid'] === 'test') {
             try {
                 $decoded = JWT::decode($jwt, $this->key, array('HS256'),'test');
