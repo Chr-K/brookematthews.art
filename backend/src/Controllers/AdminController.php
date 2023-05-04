@@ -20,18 +20,16 @@ use App\Helpers\Token;
         return($response);
     }
     function admin_logout(){
-        $expire = time() + (7 * 24 * 60 * 60);
-
-        session_destroy();
-        setcookie("jwt","",time()-$expire,"brookematthews.art",true,true);
+        $model = new AdminModel();
+        $model->Logout();
         return('logout success');
     }
     function isLoggedIn(){
         if(isset($_SESSION['user_id'])){
             $result = array('status'=>true);
-            $tolken = new Token;
-            $tolken_value = $tolken->DecodeToken();
-            echo($tolken_value);
+            $token = new Token;
+            $tokenValue = $token->DecodeToken();
+            echo($tokenValue);
             return($result);
 
         }
