@@ -33,7 +33,6 @@ class AdminModel{
         $expire = $createdAt + (7 * 24 * 60 * 60);
         session_destroy();
         setcookie('jwt','',$expire,'/','.brookematthews.art',true,true);
-
     }
 }
 

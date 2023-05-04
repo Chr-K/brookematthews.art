@@ -14,7 +14,6 @@ class Token{
         $expire = $time + (7 * 24 * 60 * 60);
         $jwt = JWT::encode([
             'id'=>$id,
-            'createdAt'=>$time
         ],$this->key,'HS256',null,['kid'=>'test']);
         setcookie('jwt',$jwt,$expire,'/','.brookematthews.art',true,true);
     }
