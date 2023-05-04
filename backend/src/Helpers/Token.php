@@ -28,9 +28,13 @@ class Token{
                 return $decoded;
             } catch (Exception $e) {
                 echo 'Invalid JWT: ' . $e->getMessage();
+                http_response_code(401);
+                exit();
             }
         } else {
             echo 'Invalid or missing "kid" in JWT header';
+            http_response_code(401);
+            exit();
         }
     }
 }
