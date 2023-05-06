@@ -4,3 +4,7 @@ background-color: none;
 width:15rem;
 height:3rem;
 }
+.input-primary{
+    background-color: rgba(255, 255, 255, 0);
+    border:none;
+}

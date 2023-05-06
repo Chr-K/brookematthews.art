@@ -7,13 +7,35 @@ img{
     max-width: 20rem;
 }
 .close_icon{
-    max-width: 2rem;
+    width: 2rem;
+    transform:translate(0px,20px);
+}
+.close_icon:hover{
+    cursor:pointer;
 }
 .edit_item_options{
     display:grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.col2{
+    grid-column: 2;
+}
+.checkmarkIcon{
+width: 2rem;
 
 }
-.pencil_icon{
-transform:translate(130px,-10px);
+.checkmarkIcon:hover{
+    cursor:pointer;
+}
+.title_check{
+    transform:translate(0px,20px)
+}
+.price_check {
+width:2rem;
+transform:translate(0px,20px)
+
+}
+.price{
+    margin-top:2rem;
 }

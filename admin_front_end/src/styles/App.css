@@ -11,3 +11,6 @@ grid-template-rows:10vh auto auto auto;
     text-decoration: none;
     color:white;
 }
+.text-center{
+    text-align: center;
+}
