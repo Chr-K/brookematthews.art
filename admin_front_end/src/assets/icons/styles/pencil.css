@@ -1,0 +1,8 @@
+.pencil{
+    stroke:white;
+    stroke-width:4px;
+    fill:none;
+}
+.pencil_container{
+    max-width:2rem;
+}

@@ -1,7 +1,19 @@
 .item_container{
     display:flex;
-    background-color: red;
+    flex-direction: column;
+    text-align: center;
 }
 img{
     max-width: 20rem;
+}
+.close_icon{
+    max-width: 2rem;
+}
+.edit_item_options{
+    display:grid;
+    grid-template-columns: auto auto;
+
+}
+.pencil_icon{
+transform:translate(130px,-10px);
 }

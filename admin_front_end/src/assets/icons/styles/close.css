@@ -1,0 +1,14 @@
+.top_line{
+fill:white;
+transform-origin: 50% 50%;
+transform: rotate(45deg);
+}
+.bottom_line{
+fill:white;
+transform-origin: 50% 50%;
+transform: rotate(-45deg);
+}
+svg{
+    overflow:visible;
+    
+}

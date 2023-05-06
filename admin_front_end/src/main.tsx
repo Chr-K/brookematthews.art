@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import {Login, Home,Edit_Shop} from './pages/barrel.tsx'
+import {Login, Home,Edit_Shop, OrderManagement, Messages} from './pages/barrel.tsx'
 import './styles/index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { UserContextProvider } from './globalContext/user.tsx'
@@ -21,6 +21,14 @@ children:[
   {
     path:'/edit_shop',
     element:<Edit_Shop></Edit_Shop>
+  },
+  {
+    path:'/order_management',
+    element:<OrderManagement></OrderManagement>
+  },
+  {
+    path:'/messages',
+    element:<Messages></Messages>
   }
 ]
 }

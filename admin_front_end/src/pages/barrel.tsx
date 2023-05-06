@@ -1,3 +1,5 @@
 export {default as Login} from './login.tsx'
 export {default as Home} from './home.tsx'
 export {default as Edit_Shop} from './edit_shop.tsx'
+export {default as OrderManagement} from './orderManagement.tsx'
+export {default as Messages} from './messages.tsx'

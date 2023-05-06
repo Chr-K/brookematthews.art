@@ -1,7 +1,13 @@
 .edit_shop_container{
     display:flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    gap: 5rem;
+    min-height:100vh;
 }
+@media only screen and (max-width: 800px) {
+.edit_shop_container{
+flex-direction: column;
+}    
+} 

@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 
 function App() {
   const [page,setPage] = useState(
-    <Outlet></Outlet>
+    <Outlet></Outlet>    
     )
   useEffect(()=>{
     async function status(){
