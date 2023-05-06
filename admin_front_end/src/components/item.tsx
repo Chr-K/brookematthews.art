@@ -46,7 +46,7 @@ export default function Item(){
                 </div>
             </div>
 
-            <img src='../public/painting.jpeg'></img>
+            <img src='./painting.jpeg'></img>
             <div className='edit_item_options'>
             <input className='text-primary input-primary white text-center col2' onChange={(e)=>{inputChange(e,setItemPrice,setPriceCheck)}} onBlur={(e)=>{inputBlur(e,setItemPrice,setPriceCheck,'$400')}} onFocus={(e)=>inputFocus(e,setItemPrice,'$400')} defaultValue={itemPrice}></input>
             <div style={{display:priceCheck}} onClick={()=>{alert('hello')}} className='price_check'>
