@@ -1,6 +1,6 @@
 import './styles/item.css'
 import {CheckMark, CloseIcon} from '../assets/icons/barrel.tsx'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export default function Item(){
     const [itemValue,setItemTitle] = useState('Title')
