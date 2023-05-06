@@ -12,7 +12,6 @@ function App() {
     <>
     <Header></Header>
     <Outlet></Outlet>    
-
     </>
     )
   useEffect(()=>{
@@ -21,10 +20,8 @@ function App() {
       if(response.status){
         setPage (
           <div>
-          <Header></Header>
-      <div className='container'>
+        <Header></Header>
         <Outlet></Outlet>
-      </div>  
           </div>
         )
       }

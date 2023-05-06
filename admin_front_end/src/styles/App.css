@@ -6,6 +6,7 @@ grid-template-rows:10vh auto auto auto;
 .header{
     text-align: center;
     line-height: 4rem;
+    height: 4rem;
 }
 .link {
     text-decoration: none;
