@@ -1,6 +1,7 @@
 import './styles/item.css'
-import {CheckMark, CloseIcon} from '../assets/icons/barrel.tsx'
+import {CheckMark, PencilIcon} from '../assets/icons/barrel.tsx'
 import { useState } from 'react'
+import TrashCan from '../assets/icons/trash.tsx'
 
 export default function Item(){
     const [itemValue,setItemTitle] = useState('Title')
@@ -35,19 +36,22 @@ export default function Item(){
     return(
         <div className="item_container">
             <div className='edit_item_options'>
-                <div>
-                <CloseIcon></CloseIcon>
+                <div className='delete_item'>
+                    <TrashCan></TrashCan>
                 </div>
                 <div>
-                    <input className='text-primary input-primary white text-center' onChange={(e)=>{inputChange(e,setItemTitle,setTitleCheck)}} onBlur={(e)=>{inputBlur(e,setItemTitle,setTitleCheck,'title')}} onFocus={(e)=>inputFocus(e,setItemTitle,'Title')} defaultValue={itemValue}></input>
+                    <input className='text-primary input-primary white text-center' onChange={(e)=>{inputChange(e,setItemTitle,setTitleCheck)}} onBlur={(e)=>{inputBlur(e,setItemTitle,setTitleCheck,'Title')}} onFocus={(e)=>inputFocus(e,setItemTitle,'Title')} defaultValue={itemValue}></input>
                 </div>
                 <div style={{display:titleCheck}} onClick={()=>{alert('hello')}} className='title_check'>
                     <CheckMark></CheckMark>
                 </div>
             </div>
+            <img className='edit_image' src='./painting.jpeg'></img>
 
-            <img src='./painting.jpeg'></img>
             <div className='edit_item_options'>
+            <div className='pencil_icon'>
+            <PencilIcon></PencilIcon>
+            </div>
             <input className='text-primary input-primary white text-center col2' onChange={(e)=>{inputChange(e,setItemPrice,setPriceCheck)}} onBlur={(e)=>{inputBlur(e,setItemPrice,setPriceCheck,'$400')}} onFocus={(e)=>inputFocus(e,setItemPrice,'$400')} defaultValue={itemPrice}></input>
             <div style={{display:priceCheck}} onClick={()=>{alert('hello')}} className='price_check'>
                     <CheckMark></CheckMark>

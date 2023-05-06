@@ -8,3 +8,11 @@ height:3rem;
     background-color: rgba(255, 255, 255, 0);
     border:none;
 }
+input:active{
+    border:0;
+    outline:none;
+}
+input:focus{
+    border:0;
+    outline:none;
+}
