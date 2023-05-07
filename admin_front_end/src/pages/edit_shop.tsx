@@ -9,8 +9,9 @@ export default function EditShop(){
                 price:number
                 }
                 const data = await GetItems()
-                const components = data.map((element:Painting)=>{
-                        console.log(element.name)
+                const components = data.map((element:Painting,index:number)=>{
+                        console.log(index)
+                        console.log(element)
                 })
                 return(components)
         }
