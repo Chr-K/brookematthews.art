@@ -5,7 +5,7 @@ class ItemModel{
     function get_items(){
         /* */
         require 'db.php';
-        $stmt = $mysqli->prepare('SELECT name FROM items');
+        $stmt = $mysqli->prepare('SELECT url, name, description, price FROM items');
         $stmt->execute();
         $stmt->store_result();
         if($stmt->num_rows()>0){
