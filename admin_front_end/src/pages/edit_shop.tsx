@@ -1,5 +1,4 @@
 import './styles/edit_shop.css'
-import Item from '../components/item'
 import GetItems from '../services/getitems'
 export default function EditShop(){
         async function getitems_handler(){
