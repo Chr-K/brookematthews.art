@@ -10,9 +10,9 @@ class ItemModel{
         $stmt->store_result();
         if($stmt->num_rows()>0){
             $results = array();
-            $stmt->bind_result($name);
+            $stmt->bind_result($url,$name,$description,$price);
             while ($stmt->fetch()){
-                array_push($results,array('name'=>$name));
+                array_push($results,array('url'=>$url,'name'=>$name,'$description'=>$description,'price'=>$price));
             }
             return($results);
         }   
