@@ -1,9 +1,9 @@
 import './styles/edit_shop.css'
 import Item from '../components/item'
 import GetItems from '../services/getitems'
-import { useEffect, useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 export default function EditShop(){
-        const [items,setItems] = useState()
+        const [items,setItems] = useState<ReactNode[]>([])
         useEffect(()=>{
                 async function getitems(){
                         interface Painting{
@@ -14,7 +14,7 @@ export default function EditShop(){
                         }
                         const data = await GetItems()
                         const components = data.map((element:Painting,index:number)=>{
-                                <Item key={index} title={element.name} imgurl={element.url} price={element.price}></Item>
+                                return (<Item key={index} title={element.name} imgurl={element.url} price={element.price}></Item>)
                         })
                         setItems(components)
                 }
