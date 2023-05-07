@@ -10,7 +10,7 @@ export default function EditShop(){
                 }
                 const data = await GetItems()
                 const components = data.map((element:Painting)=>{
-                        console.log(element)
+                        console.log(element.name)
                 })
                 return(components)
         }
