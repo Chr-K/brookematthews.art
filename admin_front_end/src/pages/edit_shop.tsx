@@ -1,24 +1,29 @@
 import './styles/edit_shop.css'
+import Item from '../components/item'
 import GetItems from '../services/getitems'
+import { useEffect, useState } from 'react'
 export default function EditShop(){
-        async function getitems_handler(){
-                interface Painting{
-                url:string,
-                name:string,
-                description:string,
-                price:number
+        const [items,setItems] = useState()
+        useEffect(()=>{
+                async function getitems(){
+                        interface Painting{
+                        url:string,
+                        name:string,
+                        description:string,
+                        price:number
+                        }
+                        const data = await GetItems()
+                        const components = data.map((element:Painting,index:number)=>{
+                                <Item key={index} title={element.name} imgurl={element.url} price={element.price}></Item>
+                        })
+                        setItems(components)
                 }
-                const data = await GetItems()
-                const components = data.map((element:Painting,index:number)=>{
-                        console.log(index)
-                        console.log(element)
-                })
-                return(components)
-        }
+                getitems()
+        },[])
+
     return(
 <div className='edit_shop_container'>
-        <button onClick={()=>{getitems_handler()}}>getitems</button>
-
+        {items}
 </div>
         )
 }
