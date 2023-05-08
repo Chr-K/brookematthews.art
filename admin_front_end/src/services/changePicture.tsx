@@ -8,5 +8,6 @@ export async function changePicture(file:File,currentUrl:string){
         credentials:'include',
         body:data
     })
+    console.log(response.json())
     return(response)
 }
