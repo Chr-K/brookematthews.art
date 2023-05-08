@@ -43,18 +43,25 @@ class AdminModel{
                 $uploadOK = true;
             }
             else{
+                echo '1';
                 $uploadOK = false;
             }
         }
         if(file_exists($targetFile)){
+            echo '2';
+
             $uploadOK = false;
         }
         if($_FILES["uploadPicture"]["size"]>20000000){
+            echo '3';
+
             $uploadOK = false;
         }
 
         $allowFormats = array("jpg","jpeg","png","gif");
         if(!in_array($fileType,$allowFormats)){
+            echo '4';
+
             $uploadOK = false;
         }
 
