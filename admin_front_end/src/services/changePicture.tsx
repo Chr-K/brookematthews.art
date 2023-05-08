@@ -8,6 +8,7 @@ export async function changePicture(file:File,currentUrl:string){
         credentials:'include',
         body:data
     })
-    console.log(response.text())
+    const responseText = await response.text()
+    console.log(responseText)
     return(response)
 }
