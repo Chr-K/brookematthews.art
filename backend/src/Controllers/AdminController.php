@@ -62,11 +62,11 @@ use Ramsey\Uuid\Uuid;
                     return("file upload success");
                 }
                 else{
-                    return("file upload failed");
+                    return("file upload failed 2");
                 }
             }
             else {
-                return("file upload failed");
+                return("file upload failed 1");
             }
         }
     }
