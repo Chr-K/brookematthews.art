@@ -19,7 +19,7 @@ export default function EditShop(){
                         setItems(components)
                 }
                 getitems()
-        },[items])
+        },[])
 
     return(
 <div className='edit_shop_container'>
