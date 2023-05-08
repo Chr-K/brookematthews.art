@@ -5,6 +5,7 @@
         }
     },
     "require": {
-        "firebase/php-jwt": "*"
+        "firebase/php-jwt": "*",
+        "ramsey/uuid": "^4.7"
     }
 }

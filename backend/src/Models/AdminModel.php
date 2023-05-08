@@ -34,6 +34,46 @@ class AdminModel{
         session_destroy();
         setcookie('jwt','',$expire,'/','.brookematthews.art',true,true);
     }
+    function UpdateItemPhoto($targetFile,$fileType){
+
+        //check if file is valid
+        if(isset($POST["itemimage"])){
+            $check = getimagesize($_FILES["uploadPicture"]["tmp_name"]);
+            if($check){
+                $uploadOK = true;
+            }
+            else{
+                $uploadOK = false;
+            }
+        }
+        if(file_exists($targetFile)){
+            $uploadOK = false;
+        }
+        if($_FILES["uploadPicture"]["size"]>20000000){
+            $uploadOK = false;
+        }
+
+        $allowFormats = array("jpg","jpeg","png","gif");
+        if(!in_array($fileType,$allowFormats)){
+            $uploadOK = false;
+        }
+
+        return($uploadOK);
+
+    }
+
+    function updateItemPhotoURL($currentPhotoUrl,$targetFile){
+        require('db.php');
+        $stmt = $mysqli->prepare('UPDATE items SET url = ? WHERE url = ?');
+        $stmt->bind_param('ss',$targetFile,$currentPhotoUrl);
+        if($stmt->execute())
+        {
+            return(true);
+        }
+        else{
+            return(false);
+        }
+    }
 }
 
 

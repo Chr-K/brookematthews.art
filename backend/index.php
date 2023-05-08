@@ -15,5 +15,7 @@ $router->addRoute('GET','/get_admin_status',new AdminController,'isLoggedIn');
 $router->addRoute('GET','/getitems',new ItemController,'get_items');
 $router->addRoute('POST','/adminlogin',new AdminController,'admin_login');
 $router->addRoute('GET','/admin_logout',new AdminController,'admin_logout');
+$router->addRoute('POST','/updateitemphoto',new AdminController,'UpdateItemPhoto');
+
 $router->handleRequest();
 ?>

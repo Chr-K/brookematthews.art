@@ -30,14 +30,17 @@ width: 2rem;
     cursor:pointer;
 }
 .title_check{
-    transform:translate(0px,20px)
+    transform:translate(0px,20px);
 }
 .price_check {
 width:2rem;
-transform:translate(0px,20px)
+transform:translate(0px,20px);
 
 }
 
 .picture-icon-container{
     transform: translate(0,10px);
+}
+.picture-icon-container:hover{
+    cursor:pointer;
 }

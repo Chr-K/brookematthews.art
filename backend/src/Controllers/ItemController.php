@@ -8,6 +8,7 @@ class ItemController {
         $data = $model->get_items();
         return($data);
     }
+
 }
 
 
