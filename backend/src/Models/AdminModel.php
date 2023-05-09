@@ -73,6 +73,7 @@ class AdminModel{
         $stmt->bind_param('ss',$targetFile,$currentPhotoUrl);
         if($stmt->execute())
         {
+            echo $targetFile;
             return(true);
         }
         else{
