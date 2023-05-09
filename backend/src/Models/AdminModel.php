@@ -63,7 +63,7 @@ class AdminModel{
             echo '4m';
             $uploadOK = false;
         }
-
+        echo $uploadOK;
         return($uploadOK);
 
     }
