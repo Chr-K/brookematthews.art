@@ -35,7 +35,7 @@ class AdminModel{
         setcookie('jwt','',$expire,'/','.brookematthews.art',true,true);
     }
     function UpdateItemPhoto($targetFile,$fileType){
-
+        $uploadOK = false;
         //check if file is valid
         if(isset($POST["itemimage"])){
             $check = getimagesize($_FILES["uploadPicture"]["tmp_name"]);
@@ -54,7 +54,6 @@ class AdminModel{
         }
         if($_FILES["uploadPicture"]["size"]>20000000){
             echo '3m';
-
             $uploadOK = false;
         }
 
