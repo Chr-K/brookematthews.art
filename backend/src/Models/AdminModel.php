@@ -37,7 +37,7 @@ class AdminModel{
     function UpdateItemPhoto($targetFile,$fileType){
         $uploadOK = false;
         //check if file is valid
-        if(isset($POST["itemimage"])){
+        if(isset($_FILES["uploadPicture"])){
             $check = getimagesize($_FILES["uploadPicture"]["tmp_name"]);
             if($check){
                 $uploadOK = true;
