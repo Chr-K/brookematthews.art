@@ -67,10 +67,11 @@ class AdminModel{
 
     }
 
-    function updateItemPhotoURL($currentPhotoUrl,$targetFile){
+    function updateItemPhotoURL($currentPhotoUrl,$newURL){
         require('db.php');
+        echo $newURL;
         $stmt = $mysqli->prepare('UPDATE items SET url = ? WHERE url = ?');
-        $stmt->bind_param('ss',$targetFile,$currentPhotoUrl);
+        $stmt->bind_param('ss',$newURL,$currentPhotoUrl);
         if($stmt->execute())
         {
             return(true);
