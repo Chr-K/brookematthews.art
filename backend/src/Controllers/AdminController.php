@@ -53,6 +53,7 @@ use Ramsey\Uuid\Uuid;
         $fileType = strtolower(pathinfo(basename($_FILES["uploadPicture"]["name"]),PATHINFO_EXTENSION));
 
         $targetFile = $targetDir . $uuid . '.' . $fileType;
+        echo $targetFile;
         $currentPhotoUrl = $this->data['currentPhotoUrl'];
         $model = new AdminModel();
         $token = new Token();
