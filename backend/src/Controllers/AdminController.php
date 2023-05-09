@@ -66,7 +66,7 @@ use Ramsey\Uuid\Uuid;
                 }
             }
             else {
-                return($model->UpdateItemPhoto($targetFile,$fileType));
+                return("file upload failed 1");
             }
         }
     }
