@@ -51,13 +51,14 @@ use Ramsey\Uuid\Uuid;
         $targetDir = getenv("IMAGE_UPLOAD_FILE");
         $fileType = strtolower(pathinfo(basename($_FILES["uploadPicture"]["name"]),PATHINFO_EXTENSION));
         $targetFile = $targetDir . $uuid . '.' . $fileType;
+        $newURL = getenv("NEW_IMAGE_PATH") . $uuid . '.' . $fileType; 
         $currentPhotoUrl = $_POST['currentPhotoUrl'];
         $model = new AdminModel();
         $token = new Token();
         if($token->DecodeToken()){
             if($model->UpdateItemPhoto($targetFile,$fileType)){
                 move_uploaded_file($_FILES["uploadPicture"]["tmp_name"],$targetFile);
-                if($model->updateItemPhotoURL($currentPhotoUrl,$targetFile)){
+                if($model->updateItemPhotoURL($currentPhotoUrl,$newURL)){
                     return("file upload success");
                 }
                 else{
