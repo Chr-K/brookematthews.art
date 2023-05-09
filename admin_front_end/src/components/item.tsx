@@ -70,7 +70,7 @@ export default function Item({title,imgurl,price}:Item){
             <div className='edit_item_options'>
             <div className='picture-icon-container' onClick={()=>pictureInput()}>
                 <PictureIcon></PictureIcon>
-                <input id='change_picture_input' onChange={(e)=>selectPicture(e)} type='file' style={{display:'none'}}></input>
+                <input name='uploadPicture' id='change_picture_input' onChange={(e)=>selectPicture(e)} type='file' style={{display:'none'}}></input>
             </div>
             <input className='text-primary input-primary white text-center col2' onChange={(e)=>{inputChange(e,setItemPrice,setPriceCheck)}} onBlur={(e)=>{inputBlur(e,setItemPrice,setPriceCheck,price.toString())}} onFocus={(e)=>inputFocus(e,setItemPrice,price.toString())} defaultValue={itemPrice}></input>
             <div style={{display:priceCheck}} onClick={()=>{alert('hello')}} className='price_check'>
