@@ -2,7 +2,6 @@
 namespace App\Controllers;
 use App\Models\AdminModel;
 use App\Helpers\Token;
-use Ramsey\Uuid\Rfc4122\UuidV4;
 use Ramsey\Uuid\Uuid;
  class AdminController{
     private $data;
@@ -52,7 +51,7 @@ use Ramsey\Uuid\Uuid;
         $targetDir = getenv("IMAGE_UPLOAD_FILE");
         $fileType = strtolower(pathinfo(basename($_FILES["uploadPicture"]["name"]),PATHINFO_EXTENSION));
         $targetFile = $targetDir . $uuid . '.' . $fileType;
-        $currentPhotoUrl = $this->data['currentPhotoUrl'];
+        $currentPhotoUrl = $_POST['currentPhotoUrl'];
         $model = new AdminModel();
         $token = new Token();
         if($token->DecodeToken()){
