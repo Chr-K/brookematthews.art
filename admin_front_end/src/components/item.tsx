@@ -48,6 +48,7 @@ export default function Item({title,imgurl,price}:Item){
         if(file.type.startsWith('image')){
             imgElemenet.src = URL.createObjectURL(file);
             changePicture(file,imgurl)
+            console.log(imgurl)
         }
         else{
             alert('invalid file type')
