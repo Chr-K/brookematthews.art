@@ -1,6 +1,7 @@
 import './styles/edit_shop.css'
 import Item from '../components/item'
 import GetItems from '../services/getitems'
+import { Link } from 'react-router-dom'
 import { ReactNode, useEffect, useState } from 'react'
 export default function EditShop(){
         const [items,setItems] = useState<ReactNode[]>([])
@@ -24,6 +25,15 @@ export default function EditShop(){
     return(
 <div className='edit_shop_container'>
         {items}
+                <Link className="link" to={'/additem'}>        
+
+        <div className='add_item'>
+        <div className='add_item_text black'>
+                Add Item
+        </div>
+        </div>
+                </Link>
+
 </div>
         )
 }

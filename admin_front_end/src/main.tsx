@@ -5,6 +5,7 @@ import {Login, Home,Edit_Shop, OrderManagement, Messages} from './pages/barrel.t
 import './styles/index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { UserContextProvider } from './globalContext/user.tsx'
+import AddItem from './pages/addItem.tsx'
 const router = createBrowserRouter([
 {
 path:'',
@@ -29,6 +30,10 @@ children:[
   {
     path:'/messages',
     element:<Messages></Messages>
+  },
+  {
+    path:'/additem',
+    element:<AddItem></AddItem>
   }
 ]
 }

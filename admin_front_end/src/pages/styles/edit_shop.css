@@ -5,10 +5,22 @@
     gap: 5rem;
     min-height:100vh;
 }
+.add_item{
+    background-color: white;
+    width:15rem;
+    height:15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+.add_item:hover{
+    cursor:pointer;
+}
+
 @media only screen and (max-width: 800px) {
 .edit_shop_container{
 flex-direction: column;
-margin-top:1rem;
 align-items: center;
 } 
 }
