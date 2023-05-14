@@ -19,7 +19,7 @@ export default function AddItem(){
         const name = document.getElementById('add_item_name') as HTMLInputElement
         const price = document.getElementById('add_item_price') as HTMLInputElement
         const description = document.getElementById('add_item_description') as HTMLInputElement
-
+        console.log(insertImage)
         AddNewItem(name.value,description.value,price.value,insertImage!)
     }
     return(
