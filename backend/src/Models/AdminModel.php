@@ -62,7 +62,6 @@ class AdminModel{
             echo '4m'. $fileType;
             $uploadOK = false;
         }
-        echo $uploadOK;
         return($uploadOK);
 
     }
