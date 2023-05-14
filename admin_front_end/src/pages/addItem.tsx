@@ -37,7 +37,7 @@ export default function AddItem(){
             <div className='preview_container'>
             <img className='preview_img' id='preview_img'></img>
             </div>
-            <button onClick={()=>(handleAddItem())} className='button-primary white text-primary add_item_submit'>Submit</button>
+            <button type='button' onClick={()=>(handleAddItem())} className='button-primary white text-primary add_item_submit'>Submit</button>
 
         </form>
 
