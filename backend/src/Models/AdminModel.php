@@ -34,7 +34,7 @@ class AdminModel{
         session_destroy();
         setcookie('jwt','',$expire,'/','.brookematthews.art',true,true);
     }
-    function UpdateItemPhoto($targetFile,$fileType){
+    function UploadImageCheck($targetFile,$fileType){
         $uploadOK = false;
         //check if file is valid
         if(isset($_FILES["uploadPicture"])){
@@ -69,7 +69,6 @@ class AdminModel{
 
     function updateItemPhotoURL($currentPhotoUrl,$newURL){
         require('db.php');
-        echo $newURL;
         $stmt = $mysqli->prepare('UPDATE items SET url = ? WHERE url = ?');
         $stmt->bind_param('ss',$newURL,$currentPhotoUrl);
         if($stmt->execute())
@@ -77,7 +76,17 @@ class AdminModel{
             return(true);
         }
         else{
-            echo '5m';
+            return(false);
+        }
+    }
+    function addItem($name,$price,$description,$url){
+        require('db.php');
+        $stmt = $mysqli->prepare('INSERT INTO items (name, description, url, price) VALUES(?,?,?,?)');
+        $stmt->bind_param('sssi',$name,$description,$url,$price);
+        if($stmt->execute()){
+            return(true);
+        }
+        else{
             return(false);
         }
     }
