@@ -59,7 +59,7 @@ class AdminModel{
 
         $allowFormats = array("jpg","jpeg","png");
         if(in_array($fileType,$allowFormats) == false){
-            echo '4m';
+            echo '4m'. $fileType;
             $uploadOK = false;
         }
         echo $uploadOK;
