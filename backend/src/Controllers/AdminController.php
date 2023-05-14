@@ -72,6 +72,7 @@ use Ramsey\Uuid\Uuid;
                 return('item added');
             }
             else{
+                echo 'add item failed';
                 return('add item failed');
             }
         }
@@ -89,7 +90,7 @@ use Ramsey\Uuid\Uuid;
         $fileType = strtolower(pathinfo(basename($_FILES["uploadPicture"]["name"]),PATHINFO_EXTENSION));
         $targetFile = $targetDir . $uuid . '.' . $fileType;
         $newURL = getenv("NEW_IMAGE_PATH") . $uuid . '.' . $fileType; 
-        
+
         if($token->DecodeToken()){
             if($model->UploadImageCheck($targetFile,$fileType)){
                 if(move_uploaded_file($_FILES["uploadPicture"]["tmp_name"],$targetFile)){

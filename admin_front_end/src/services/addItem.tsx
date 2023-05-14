@@ -4,6 +4,7 @@ data.append('uploadPicture',file,file.name)
 data.append('itemName',name)
 data.append('description',description)
 data.append('price',price)
+
 const response = await fetch('https://api.brookematthews.art/additem',{
     method:'POST',
     credentials:'include',
